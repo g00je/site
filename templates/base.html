@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no"
+        />
+        <meta name="theme-color" content="#fff" />
+        <meta name="description" content="صفحه اصلی وب سایت گوجه" />
+
+        <title>گوجه | سرویس پیدا کردن کافه، رستوران و ...</title>
+
+        <meta
+            name="apple-mobile-web-app-status-bar-style"
+            content="black-translucent"
+        />
+        <meta name="mobile-web-app-capable" content="yes" />
+
+        <link rel="apple-touch-icon" href="/static/icon/gooje-logo192.png" />
+        <link
+            rel="apple-touch-icon"
+            sizes="48x48"
+            href="/static/icon/gooje-logo48.png"
+        />
+        <link
+            rel="apple-touch-startup-image"
+            href="/static/icon/gooje-splash.jpg"
+        />
+
+        <link rel="manifest" href="/static/manifest.json" />
+        <link
+            rel="shortcut icon"
+            href="/static/icon/gooje.ico"
+            type="image/x-icon"
+        />
+
+        <link rel="stylesheet" href="/static/font/imports.css" />
+        <link rel="stylesheet" href="/static/style/config.css" />
+        <link rel="stylesheet" href="/static/style/theme.css" />
+        <link rel="stylesheet" href="/static/style/base.css" />
+
+        <!-- 00 team font  -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Graduate&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- 00 team font end -->
+
+        <!-- layout  -->
+        <link rel="stylesheet" href="/static/style/layout/navbar.css" />
+        <link rel="stylesheet" href="/static/style/layout/footer.css" />
+        <!-- layout end -->
+
+        <script>
+            window.onbeforeunload = function () {
+                window.scrollTo(0, 0)
+            }
+        </script>
+        <script src="/static/script/base.js" defer></script>
+        <script src="/static/script/nav.js" defer></script>
+
+        <script src="/static/public/lenis.js" defer></script>
+
+        <script defer>
+            document.addEventListener('DOMContentLoaded', () => {
+                const lenis = new Lenis()
+
+                function raf(time) {
+                    lenis.raf(time)
+                    requestAnimationFrame(raf)
+                }
+
+                requestAnimationFrame(raf)
+            })
+        </script>
+
+        {% block header %} {% endblock header %}
+    </head>
+
+    <body>
+        <div id="root" class="root">
+            {% include "layout/navbar.html" %} {% block content %} {% endblock
+            content %} {% include "layout/footer.html" %}
+        </div>
+    </body>
+</html>

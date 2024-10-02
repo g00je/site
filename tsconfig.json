@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "baseUrl": "./",
+        "rootDir": "./",
+        "outDir": "./static/script/",
+        "declaration": false
+    },
+    "include": ["./web/script/*", "static/public/lenis.js"],
+    "exclude": ["*.js"]
+}

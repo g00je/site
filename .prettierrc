@@ -1,0 +1,21 @@
+{
+    "trailingComma": "es5",
+    "tabWidth": 4,
+    "semi": false,
+    "singleQuote": true,
+    "jsxSingleQuote": true,
+    "useTabs": false,
+    "jsxBracketSameLine": false,
+    "arrowParens": "avoid",
+    "overrides": [
+        {
+            "files": [
+                "*.jsonc",
+                "*.yml"
+            ],
+            "options": {
+                "tabWidth": 2
+            }
+        }
+    ]
+}

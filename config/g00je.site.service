@@ -1,0 +1,16 @@
+[Unit]
+Description=gooje.site
+After=syslog.target
+
+[Service]
+Type=simple
+Restart=always
+WorkingDirectory=/x/g00je/site/
+EnvironmentFile=/x/g00je/site/.env
+ExecStart=/x/g00je/site/target/release/gooje
+KillSignal=SIGQUIT
+StandardError=file:/x/g00je/site/log
+NotifyAccess=all
+
+[Install]
+WantedBy=multi-user.target

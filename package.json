@@ -1,0 +1,23 @@
+{
+    "name": "heydari",
+    "version": "0.5.20",
+    "type": "module",
+    "scripts": {
+        "web": "concurrently \"npm:web:style\" \"npm:web:script\" ",
+        "web:watch": "concurrently \"npm:web:style:watch\" \"npm:web:script:watch\" ",
+        "web:style": "sass web/style:static/style -s compressed",
+        "web:script": "webpack",
+        "web:style:watch": "sass web/style:static/style -w -c",
+        "web:script:watch": "webpack --watch"
+    },
+    "devDependencies": {
+        "@trivago/prettier-plugin-sort-imports": "^4.3.0",
+        "@types/node": "^22.7.4",
+        "concurrently": "^9.0.1",
+        "sass": "^1.79.4",
+        "ts-loader": "^9.5.1",
+        "typescript": "^5.6.2",
+        "webpack": "^5.95.0",
+        "webpack-cli": "^5.1.4"
+    }
+}
