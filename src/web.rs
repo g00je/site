@@ -18,17 +18,6 @@ async fn home(env: Data<Environment<'static>>) -> Response {
     Ok(HttpResponse::Ok().content_type(ContentType::html()).body(result))
 }
 
-#[get("/contact")]
-async fn contact(env: Data<Environment<'static>>) -> Response {
-    let result = env.get_template("contact/index.html")?.render(())?;
-    Ok(HttpResponse::Ok().content_type(ContentType::html()).body(result))
-}
-
-#[get("/about")]
-async fn about(env: Data<Environment<'static>>) -> Response {
-    let result = env.get_template("about/index.html")?.render(())?;
-    Ok(HttpResponse::Ok().content_type(ContentType::html()).body(result))
-}
 
 #[get("/blogs")]
 async fn blogs(rq: HttpRequest, env: Data<Environment<'static>>) -> Response {
@@ -92,15 +81,6 @@ async fn blog(
     Ok(HttpResponse::Ok().content_type(ContentType::html()).body(result))
 }
 
-#[routes]
-#[get("/admin")]
-#[get("/admin/products")]
-#[get("/admin/product-tags")]
-async fn admin_index() -> HttpResponse {
-    let result = std::fs::read_to_string("admin/dist/index.html")
-        .unwrap_or("err reading admin index.html".to_string());
-    HttpResponse::Ok().content_type(ContentType::html()).body(result)
-}
 
 #[get("/robots.txt")]
 async fn robots() -> HttpResponse {
