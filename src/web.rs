@@ -14,7 +14,7 @@ type Response = Result<HttpResponse, AppErr>;
 
 #[get("/")]
 async fn home(env: Data<Environment<'static>>) -> Response {
-    let result = env.get_template("home.html")?.render(())?;
+    let result = env.get_template("home/index.html")?.render(())?;
     Ok(HttpResponse::Ok().content_type(ContentType::html()).body(result))
 }
 
