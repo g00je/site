@@ -69,7 +69,6 @@ async fn main() -> std::io::Result<()> {
     dotenvy::from_path(".env").expect("could not read .env file");
     pretty_env_logger::init();
 
-    let _ = std::fs::create_dir(Config::RECORD_DIR);
     let data = Data::new(AppState {});
 
     HttpServer::new(move || {
