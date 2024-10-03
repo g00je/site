@@ -14,15 +14,7 @@ async fn web(conn: ConnectionInfo) -> HttpResponse {
             xmlns: "http://www.sitemaps.org/schemas/sitemap/0.9",
             url {
                 loc {"{host}/"}
-                lastmod { "2024-07-01" }
-            }
-            url {
-                loc {"{host}/about/"}
-                lastmod { "2024-07-01" }
-            }
-            url {
-                loc {"{host}/contact/"}
-                lastmod { "2024-07-01" }
+                lastmod { "2024-10-03" }
             }
         }
     }
