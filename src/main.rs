@@ -70,7 +70,7 @@ async fn main() -> std::io::Result<()> {
     pretty_env_logger::init();
 
     let _ = std::fs::create_dir(Config::RECORD_DIR);
-    let data = Data::new(AppState { sql: pool.clone() });
+    let data = Data::new(AppState {});
 
     HttpServer::new(move || {
         App::new()
