@@ -111,7 +111,7 @@ Disallow: /admin/
 User-agent: *
 Allow: /
 
-Sitemap: https://heydari-mi.com/sitemap.xml
+Sitemap: https://gooje.site/sitemap.xml
 "###,
     )
 }

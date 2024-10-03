@@ -1,6 +1,6 @@
 {
-    "name": "heydari",
-    "version": "0.5.20",
+    "name": "gooje",
+    "version": "0.1.0",
     "type": "module",
     "scripts": {
         "web": "concurrently \"npm:web:style\" \"npm:web:script\" ",
