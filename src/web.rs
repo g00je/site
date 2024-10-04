@@ -14,7 +14,7 @@ type Response = Result<HttpResponse, AppErr>;
 
 #[get("/")]
 async fn home(env: Data<Environment<'static>>) -> Response {
-    let result = env.get_template("home/index.html")?.render(())?;
+    let result = env.get_template("home.html")?.render(())?;
     Ok(HttpResponse::Ok().content_type(ContentType::html()).body(result))
 }
 
@@ -29,7 +29,7 @@ async fn blogs(rq: HttpRequest, env: Data<Environment<'static>>) -> Response {
     let result = simurgh_request(&format!("/blogs-ssr/?page={page}")).await;
     let result = String::from_utf8(result?.body().await?.to_vec())?;
 
-    let result = env.get_template("blogs/index.html")?.render(context! {
+    let result = env.get_template("blogs.html")?.render(context! {
         blogs_body => result
     })?;
     Ok(HttpResponse::Ok().content_type(ContentType::html()).body(result))
