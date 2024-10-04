@@ -1,91 +1,83 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta charset="utf-8" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no"
-        />
-        <meta name="theme-color" content="#fff" />
-        <meta name="description" content="صفحه اصلی وب سایت گوجه" />
 
-        <title>گوجه | سرویس پیدا کردن کافه، رستوران و ...</title>
+<head>
 
-        <meta
-            name="apple-mobile-web-app-status-bar-style"
-            content="black-translucent"
-        />
-        <meta name="mobile-web-app-capable" content="yes" />
+    {% block title %} {% endblock title %}
 
-        <link rel="apple-touch-icon" href="/static/icon/gooje-logo192.png" />
-        <link
-            rel="apple-touch-icon"
-            sizes="48x48"
-            href="/static/icon/gooje-logo48.png"
-        />
-        <link
-            rel="apple-touch-startup-image"
-            href="/static/icon/gooje-splash.jpg"
-        />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+    <meta name="theme-color" content="#fff" />
 
-        <link rel="manifest" href="/static/manifest.json" />
-        <link
-            rel="shortcut icon"
-            href="/static/icon/gooje.ico"
-            type="image/x-icon"
-        />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="mobile-web-app-capable" content="yes" />
 
-        <link rel="stylesheet" href="/static/font/imports.css" />
-        <link rel="stylesheet" href="/static/style/config.css" />
-        <link rel="stylesheet" href="/static/style/theme.css" />
-        <link rel="stylesheet" href="/static/style/base.css" />
+    <link rel="apple-touch-icon" href="/static/icon/gooje-logo192.png" />
+    <link rel="apple-touch-icon" sizes="48x48" href="/static/icon/gooje-logo48.png" />
+    <link rel="apple-touch-startup-image" href="/static/icon/gooje-splash.jpg" />
 
-        <!-- 00 team font  -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Graduate&display=swap"
-            rel="stylesheet"
-        />
+    <link rel="manifest" href="/static/manifest.json" />
+    <link rel="shortcut icon" href="/static/icon/gooje.ico" type="image/x-icon" />
 
-        <!-- 00 team font end -->
+    <link rel="stylesheet" href="/static/font/imports.css" />
+    <link rel="stylesheet" href="/static/style/config.css" />
+    <link rel="stylesheet" href="/static/style/theme.css" />
+    <link rel="stylesheet" href="/static/style/base.css" />
 
-        <!-- layout  -->
-        <link rel="stylesheet" href="/static/style/layout/navbar.css" />
-        <link rel="stylesheet" href="/static/style/layout/footer.css" />
-        <!-- layout end -->
 
-        <script>
-            window.onbeforeunload = function () {
-                window.scrollTo(0, 0)
-            }
-        </script>
-        <script src="/static/script/base.js" defer></script>
-        <script src="/static/script/nav.js" defer></script>
+    <!-- layout  -->
+    <link rel="stylesheet" href="/static/style/layout/navbar.css" />
+    <link rel="stylesheet" href="/static/style/layout/footer.css" />
+    <!-- layout end -->
 
-        <script src="/static/public/lenis.js" defer></script>
+    <script>
+        window.onbeforeunload = function () {
+            window.scrollTo(0, 0)
+        }
+    </script>
+    <script src="/static/script/base.js" defer></script>
+    <script src="/static/script/nav.js" defer></script>
 
-        <script defer>
-            document.addEventListener('DOMContentLoaded', () => {
-                const lenis = new Lenis()
+    <script src="/static/public/lenis.js" defer></script>
 
-                function raf(time) {
-                    lenis.raf(time)
-                    requestAnimationFrame(raf)
-                }
+    <script defer>
+        document.addEventListener('DOMContentLoaded', () => {
+            const lenis = new Lenis()
 
+            function raf(time) {
+                lenis.raf(time)
                 requestAnimationFrame(raf)
-            })
-        </script>
+            }
 
-        {% block header %} {% endblock header %}
-    </head>
+            requestAnimationFrame(raf)
+        })
+    </script>
 
-    <body>
-        <div id="root" class="root">
-            {% include "layout/navbar.html" %} {% block content %} {% endblock
-            content %} {% include "layout/footer.html" %}
-        </div>
-    </body>
+    <style>
+        :root {
+            --simurgh--font-title: 'iranBold';
+            --simurgh--font-description: 'yekan';
+            --simurgh--font-link: 'yekan';
+            --simurgh--font-number: 'number';
+
+            --simurgh--size-title-hero: clamp(1.2rem, 2.3vw + 0.7rem, 2.1rem);
+            --simurgh--size-title-title: clamp(1.1rem, 0.7rem + 2.1vw, 1.4rem);
+            --simurgh--size-title-title-small: clamp(0.9rem, 0.5rem + 1.9vw, 1.25rem);
+            --simurgh--size-title-title-smaller: clamp(0.8rem, 0.4rem + 1.6vw, 1rem);
+            --simurgh--size-title-title-description: clamp(0.7rem, 0.4rem + 1.4vw, 0.9rem);
+            --simurgh--size-title-title-description-small: clamp(0.6rem, 0.3rem + 1.2vw, 0.8rem);
+        }
+    </style>
+
+    {% block header %} {% endblock header %}
+</head>
+
+<body>
+    <div id="root" class="root">
+        {% include "layout/navbar.html" %} {% block content %} {% endblock
+        content %} {% include "layout/footer.html" %}
+    </div>
+</body>
+
 </html>
