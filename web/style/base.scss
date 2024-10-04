@@ -55,19 +55,19 @@ html.lenis body {
 
 .root {
     overflow: hidden;
-    background-color: #121212;
+    background-color: var(--sixty-percent);
 
     @media (prefers-color-scheme: dark) {
         body {
-            @include theme.dark;
+            @include theme.light;
         }
-        background-color: #121212;
+        background-color: var(--sixty-percent);
     }
     @media (prefers-color-scheme: light) {
         body {
-            @include theme.dark;
+            @include theme.light;
         }
-        background-color: #121212;
+        background-color: var(--sixty-percent);
     }
 }
 
@@ -96,7 +96,7 @@ body {
 
 @media (prefers-color-scheme: dark) {
     body {
-        @include theme.dark;
+        @include theme.light;
     }
     main.home {
         background-color: var(--sixty-percent);
