@@ -103,11 +103,8 @@ pub fn router() -> impl HttpServiceFactory {
         .wrap(NormalizePath::trim())
         .app_data(Data::new(tmpl_env))
         .service(home)
-        .service(contact)
-        .service(about)
         .service(blogs)
         .service(blog)
-        .service(admin_index)
         .service(robots)
         .service(super::sitemap::router())
 }
