@@ -1,0 +1,827 @@
+{% extends 'base.html' %}
+
+{% block header %}
+
+<link rel="stylesheet" href="/static/style/pages/home.css">
+
+<script src="/static/script/home.js" defer></script>
+{% endblock header %}
+
+{% block content %}
+<main class="home">
+    <section class="hero">
+        <img class="hero-bg" src="/static/img/hero.png" draggable="false" alt="">
+        <header class="hero-header">
+            <h2 class="title">
+
+                پاتوق بعدیت رو با ما پیدا کن! </h2>
+            <h1 class="section_title">
+                گـــوجـــه
+            </h1>
+        </header>
+        <div class="foods-container">
+            <img src="/static/img/pizza.png" draggable='false' class="pizza" alt="">
+            <img src="/static/img/burger.png" draggable='false' class="burger" alt="">
+            <img src="/static/img/tomato.png" draggable='false' class="tomato" alt="">
+            <img src="/static/img/sushi.png" draggable='false' class="sushi" alt="">
+            <img src="/static/img/abgosht.png" draggable='false' class="abgosht" alt="">
+        </div>
+        <div class="ctas">
+            <a href="#about" class="cta title_smaller">
+                <span>
+                    چی هست؟
+                </span>
+            </a>
+            <a href="#download" class="cta main title_smaller">
+                <span>
+                    دانلود
+                </span>
+                <div class="blur-wrapper">
+
+                    <div class="bg-blur"></div>
+                </div>
+                <div class="btn-bg"></div>
+            </a>
+        </div>
+    </section>
+
+    <section class="features" id="about">
+        <aside class="features-details">
+            <h3 class="subheader title_smaller">
+                جستجو
+            </h3>
+            <h2 class="header section_title">
+                پیدا کردن کافه ها و رستوران های اطرافت </h2>
+            <p class="details title_smaller">
+                با گوجه، می توانید به راحتی طیف گسترده ای از کافه ها و رستوران ها را در منطقه خود کشف و کاوش کنید. چه
+                هوس یک فنجان قهوه یا یک غذای خوشمزه داشته باشید، گوجه شما را تحت پوشش قرار داده است.
+            </p>
+            <div class="extra-features">
+                <div class="extra-feature search">
+                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="40"
+                        width="40" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M443.5 420.2L336.7 312.4c20.9-26.2 33.5-59.4 33.5-95.5 0-84.5-68.5-153-153.1-153S64 132.5 64 217s68.5 153 153.1 153c36.6 0 70.1-12.8 96.5-34.2l106.1 107.1c3.2 3.4 7.6 5.1 11.9 5.1 4.1 0 8.2-1.5 11.3-4.5 6.6-6.3 6.8-16.7.6-23.3zm-226.4-83.1c-32.1 0-62.3-12.5-85-35.2-22.7-22.7-35.2-52.9-35.2-84.9 0-32.1 12.5-62.3 35.2-84.9 22.7-22.7 52.9-35.2 85-35.2s62.3 12.5 85 35.2c22.7 22.7 35.2 52.9 35.2 84.9 0 32.1-12.5 62.3-35.2 84.9-22.7 22.7-52.9 35.2-85 35.2z">
+                        </path>
+                    </svg>
+                    <h4 class="feature-subheader title_small">
+                        جستجوی راحت
+                    </h4>
+                    <p class="feature-detail title_smaller">
+                        کافه ها و رستوران ها رو بر اساس اولیت های خودت جستجو کن.
+                    </p>
+                </div>
+                <div class="extra-feature">
+                    <div class="comments-icon icon">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+                            height="40" width="40" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M256 32C114.6 32 0 125.1 0 240c0 47.6 19.9 91.2 52.9 126.3C38 405.7 7 439.1 6.5 439.5c-6.6 7-8.4 17.2-4.6 26S14.4 480 24 480c61.5 0 110-25.7 139.1-46.3C192 442.8 223.2 448 256 448c141.4 0 256-93.1 256-208S397.4 32 256 32zm0 368c-26.7 0-53.1-4.1-78.4-12.1l-22.7-7.2-19.5 13.8c-14.3 10.1-33.9 21.4-57.5 29 7.3-12.1 14.4-25.7 19.9-40.2l10.6-28.1-20.6-21.8C69.7 314.1 48 282.2 48 240c0-88.2 93.3-160 208-160s208 71.8 208 160-93.3 160-208 160z">
+                            </path>
+                        </svg>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+                    <h4 class="feature-subheader title_small">
+                        نظرات بقیه
+                    </h4>
+                    <p class="feature-detail title_smaller">
+                        نظرات سایر کاربران را بخوانید تا به شما در تصمیم گیری آگاهانه کمک کنه.
+                    </p>
+                </div>
+            </div>
+            <button class="features-cta title_smaller">
+                <span>ثبت نام</span>
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em"
+                    width="1em" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M217.9 256L345 129c9.4-9.4 9.4-24.6 0-33.9-9.4-9.4-24.6-9.3-34 0L167 239c-9.1 9.1-9.3 23.7-.7 33.1L310.9 417c4.7 4.7 10.9 7 17 7s12.3-2.3 17-7c9.4-9.4 9.4-24.6 0-33.9L217.9 256z">
+                    </path>
+                </svg>
+            </button>
+        </aside>
+        <aside class="features-img">
+            <img src="/static/img/features.png" loading="lazy" decoding="async" alt="">
+        </aside>
+    </section>
+
+    <section class="features-list">
+        <h3 class="list-header section_title">
+            ویژگی های گوجه
+        </h3>
+        <div class="extra-features">
+            <div class="extra-feature" id="transform">
+                <div class="extra-icon">
+                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 640 512" height="40"
+                        width="40" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M353.8 54.1L330.2 6.3c-3.9-8.3-16.1-8.6-20.4 0L286.2 54.1l-52.3 7.5c-9.3 1.4-13.3 12.9-6.4 19.8l38 37-9 52.1c-1.4 9.3 8.2 16.5 16.8 12.2l46.9-24.8 46.6 24.4c8.6 4.3 18.3-2.9 16.8-12.2l-9-52.1 38-36.6c6.8-6.8 2.9-18.3-6.4-19.8l-52.3-7.5zM256 256c-17.7 0-32 14.3-32 32V480c0 17.7 14.3 32 32 32H384c17.7 0 32-14.3 32-32V288c0-17.7-14.3-32-32-32H256zM32 320c-17.7 0-32 14.3-32 32V480c0 17.7 14.3 32 32 32H160c17.7 0 32-14.3 32-32V352c0-17.7-14.3-32-32-32H32zm416 96v64c0 17.7 14.3 32 32 32H608c17.7 0 32-14.3 32-32V416c0-17.7-14.3-32-32-32H480c-17.7 0-32 14.3-32 32z">
+                        </path>
+                    </svg>
+                </div>
+                <h4 class="extra-subheader title_small">
+                    نظرات و رتبه‌بندی‌ها
+                </h4>
+                <p class="extra-p title_smaller">
+                    بر اساس اولیت هات میتونی رتبه بندی های بقیه رو بخونی
+                </p>
+            </div>
+            <div class="extra-feature" id="transform">
+                <div class="extra-icon">
+                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 256 256" height="40"
+                        width="40" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M208,80H32a8,8,0,0,0-8,8v48a96.3,96.3,0,0,0,32.54,72H32a8,8,0,0,0,0,16H208a8,8,0,0,0,0-16H183.46a96.59,96.59,0,0,0,27-40.09A40,40,0,0,0,248,128v-8A40,40,0,0,0,208,80Zm24,48a24,24,0,0,1-17.2,23,95.78,95.78,0,0,0,1.2-15V97.38A24,24,0,0,1,232,120ZM112,56V24a8,8,0,0,1,16,0V56a8,8,0,0,1-16,0Zm32,0V24a8,8,0,0,1,16,0V56a8,8,0,0,1-16,0ZM80,56V24a8,8,0,0,1,16,0V56a8,8,0,0,1-16,0Z">
+                        </path>
+                    </svg>
+                </div>
+                <h4 class="extra-subheader title_small">
+                    پاتوق جدیدتو پیدا کن
+                </h4>
+                <p class="extra-p title_smaller">
+                    با رفیقات دنبال جای جدیدی؟ باورت نمیشه چندتا کافه رو نرفتین هنوز
+                </p>
+            </div>
+            <div class="extra-feature" id="transform">
+                <div class="extra-icon">
+                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="40"
+                        width="40" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M443.5 420.2L336.7 312.4c20.9-26.2 33.5-59.4 33.5-95.5 0-84.5-68.5-153-153.1-153S64 132.5 64 217s68.5 153 153.1 153c36.6 0 70.1-12.8 96.5-34.2l106.1 107.1c3.2 3.4 7.6 5.1 11.9 5.1 4.1 0 8.2-1.5 11.3-4.5 6.6-6.3 6.8-16.7.6-23.3zm-226.4-83.1c-32.1 0-62.3-12.5-85-35.2-22.7-22.7-35.2-52.9-35.2-84.9 0-32.1 12.5-62.3 35.2-84.9 22.7-22.7 52.9-35.2 85-35.2s62.3 12.5 85 35.2c22.7 22.7 35.2 52.9 35.2 84.9 0 32.1-12.5 62.3-35.2 84.9-22.7 22.7-52.9 35.2-85 35.2z">
+                        </path>
+                    </svg>
+                </div>
+                <h4 class="extra-subheader title_small">
+                    یجایی رو میخوای بعدا بری؟ ذخیرش کن!
+                </h4>
+                <p class="extra-p title_smaller">
+                    تو گوجه میتونی هر جایی رو به لیست مورد علاقه هات اضافه کنی
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="perfect-date">
+        <aside class="date-details">
+            <h3 class="subheader title_smaller">
+                همیشه و هرجا
+            </h3>
+            <h2 class="header section_title">
+                مهم نیست برنامت چیه، گوجه همیشه باهاته!
+            </h2>
+            <p class="details title_smaller">
+                برنامتون هرچیزی که باشه از قرار های کاری بگیر، بیرون رفتن با رفقا، قرار عاشقانه یا اصلا میخوای با خودت
+                تنها باشی، گوجه تو همه ی
+                موقعیت ها به کارت میاد.
+            </p>
+            <a href="#download" class="date-cta title_smaller">
+                <span>برو بریم</span>
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em"
+                    width="1em" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M217.9 256L345 129c9.4-9.4 9.4-24.6 0-33.9-9.4-9.4-24.6-9.3-34 0L167 239c-9.1 9.1-9.3 23.7-.7 33.1L310.9 417c4.7 4.7 10.9 7 17 7s12.3-2.3 17-7c9.4-9.4 9.4-24.6 0-33.9L217.9 256z">
+                    </path>
+                </svg>
+            </a>
+        </aside>
+        <aside class="date-imgs">
+            <img src="/static/img/dinner2.jpg" draggable="false" class="date-img" loading="lazy" decoding="async"
+                alt="">
+            <img src="/static/img/dinner1.jpg" draggable="false" class="date-img" loading="lazy" decoding="async"
+                alt="">
+            <img src="/static/img/dinner3.jpg" draggable="false" class="date-img" loading="lazy" decoding="async"
+                alt="">
+            <img src="/static/img/dinner4.png" draggable="false" class="date-img" loading="lazy" decoding="async"
+                alt="">
+            <div class="date-img-bg"></div>
+        </aside>
+    </section>
+
+    <section class="download" id="download">
+        <div class="download-wrapper">
+            <aside class="download-data">
+                <h4 class="title_smaller download_subheader">
+                    دانلود
+                </h4>
+                <h3 class="section_title download_head">
+                    آماده ای؟ بزن بریم
+                </h3>
+                <p class="download-p title_smaller">
+                    همین الان گوجه رو روی گوشیت نصب کن و از امکاناتش لذت ببر.
+                </p>
+
+                <div class="download-links">
+                    <a href="/app" class="web-download description">
+                        <svg width="40" height="40" viewBox="0 0 126.99999 127.00005" version="1.1" id="svg1"
+                            xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:svg="http://www.w3.org/2000/svg">
+
+                            <g id="layer1-9" transform="matrix(0.45145861,0,0,0.45145861,16.086023,-4.0643947)"
+                                style="stroke-width:1.65301">
+                                <path style="fill:#e13a34;stroke:none;stroke-width:1.65301"
+                                    d="m 63.369062,117.39147 c -5.651496,0.7442 -10.992885,1.87798 -16.139583,4.45134 -31.066272,15.53314 -35.028353,57.15849 -20.910255,85.39469 16.128118,32.25624 52.221974,45.73267 86.526926,41.46426 20.56502,-2.55882 41.21741,-11.41228 55.78215,-26.40668 23.2584,-23.94451 34.23451,-67.39034 6.39493,-92.53557 -10.13023,-9.1498 -23.51849,-13.3829 -37.04167,-12.45667 -11.59118,0.79391 -22.69688,4.49236 -34.39583,4.20578 -13.323364,-0.32636 -26.845181,-5.87796 -40.216668,-4.11715 M 185.0774,171.78333 h -0.26459 c -6.76922,-20.00809 -24.72136,-36.83806 -43.92083,-44.71458 1.43276,-0.60122 3.26427,-0.20528 4.7625,0 4.07947,0.55898 8.10793,1.51764 11.90625,3.1354 16.14982,6.87843 27.46764,23.81124 27.51667,41.57918 M 41.408646,135.53542 c -0.94886,3.31914 -2.557257,6.48489 -3.61312,9.78958 -2.101809,6.57835 -3.621613,13.49317 -4.27947,20.37292 -1.087466,11.37262 -0.522401,22.93051 1.862919,34.13125 1.225539,5.75475 3.388084,11.23355 4.706754,16.93333 h -0.264583 c -3.592853,-5.45432 -7.162903,-10.56079 -9.629726,-16.66875 -6.268658,-15.52147 -4.959145,-32.34027 1.267994,-47.625 2.195377,-5.38862 5.347365,-13.18674 9.949232,-16.93333 z"
+                                    id="path32" />
+                                <g id="g32" transform="translate(0.05270814,0.01756976)" style="stroke-width:1.65301">
+                                    <path
+                                        style="opacity:1;fill:#12e647;fill-opacity:1;stroke:#7caa99;stroke-width:0;stroke-dasharray:none;paint-order:markers fill stroke"
+                                        d="m 118.6553,100.3415 -2.3514,0.36176 -2.98447,0.31653 -3.52711,-0.58785 -2.71315,-0.949603 -2.75837,-1.673111 -1.71833,-1.673114 1.22092,-0.542628 1.85398,-0.768729 1.71833,-0.949603 1.80878,-1.085262 2.30618,-1.808771 2.21574,-1.899208 1.89921,-2.034866 1.76355,-2.125305 0.90438,-1.13048 1.4018,-2.260963 1.4018,-2.170522 1.67311,-3.391445 0.90438,-1.989646 0.94961,-2.396619 0.99482,-2.713157 0.76873,-2.713154 0.76873,-2.622716 0.36175,-2.080086 0.18088,-0.994822 0.54263,-0.768729 0.90438,-0.723505 1.1757,-0.226098 0.99483,0.09044 1.08526,0.723508 0.58785,0.723509 0.27131,0.633068 0.18088,0.633071 c 0,0 0.13566,0.587849 0.0452,0.904383 -0.0904,0.316537 -0.31654,1.35658 -0.31654,1.35658 l -0.36175,1.401797 -0.40697,0.859165 -0.40698,1.220917 c 0,0 -0.45219,0.678291 -0.54263,1.130483 -0.0904,0.452191 -0.63307,2.034865 -0.63307,2.034865 l -0.81394,2.39662 -1.80877,4.612365 -1.44702,3.934073 -1.89921,4.702802 -2.39662,5.697625 -2.80359,6.149816 z"
+                                        id="path30" />
+                                    <path
+                                        style="opacity:1;fill:#12e647;fill-opacity:1;stroke:#7caa99;stroke-width:0;stroke-dasharray:none;paint-order:markers fill stroke"
+                                        d="m 64.077569,92.727019 c 0,0 3.453281,10.999341 14.132874,18.097761 10.679597,7.09841 23.725327,6.90656 23.661377,6.90656 -0.064,0 8.76111,0.76739 23.59743,-5.05202 14.83632,-5.81942 25.64382,-25.196173 25.64382,-25.196173 0,0 6.39496,-10.423797 11.76674,-25.451969 5.37177,-15.028172 3.06958,-13.36548 4.02882,-14.516573 0.95925,-1.151097 -11.76673,30.631891 -29.54474,46.235608 -17.77801,15.603717 -33.12593,7.418167 -33.12593,7.418167 0,0 -16.603064,-6.388845 -18.864026,-37.680562 l -0.271317,-0.384363 -1.198309,5.720236 -0.203488,1.853988 -0.384363,2.667934 -0.339143,5.403702 0.203486,5.878502 1.605283,7.099421 c 0,0 4.999251,12.574672 12.86506,16.795352 C 79.659803,100.38198 58.647522,90.794291 64.077569,92.727019 Z"
+                                        id="path31" />
+                                </g>
+                            </g>
+                        </svg>
+
+                        دانلود نسخه وب
+                    </a>
+                    <img src="/static/img/bazaar-download.png" alt="">
+                    <img src="/static/img/direct-download.png" alt="">
+                    <img src="/static/img/app-download.png" alt="">
+                </div>
+            </aside>
+            <aside class="download-imgs">
+                <div class="imgs-wrapper">
+                    <img src="/static/img/phone2.png" draggable="true" loading="lazy" decoding="async" class="first"
+                        id="phone-img1" alt="">
+                    <img src="/static/img/phone1.png" draggable="true" loading="lazy" decoding="async" class="main"
+                        alt="">
+                    <img src="/static/img/phone3.png" draggable="true" loading="lazy" decoding="async" class="sec"
+                        id="phone-img2" alt="">
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <section class="feedback">
+        <div class="feedback-wall">
+            <div class="wall-row">
+                <img src="https://picsum.photos/1000/480" loading="lazy" decoding="async" alt="">
+                <img src="https://picsum.photos/1000/481" loading="lazy" decoding="async" alt="">
+                <img src="https://picsum.photos/1000/482" loading="lazy" decoding="async" alt="">
+                <img src="https://picsum.photos/1000/483" loading="lazy" decoding="async" alt="">
+                <img src="https://picsum.photos/1000/484" loading="lazy" decoding="async" alt="">
+                <img src="https://picsum.photos/1000/487" loading="lazy" decoding="async" alt="">
+            </div>
+            <div class="wall-row">
+                <img src="https://picsum.photos/1001/480" loading="lazy" decoding="async" alt="">
+                <img src="https://picsum.photos/1002/481" loading="lazy" decoding="async" alt="">
+                <img src="https://picsum.photos/1003/482" loading="lazy" decoding="async" alt="">
+                <img src="https://picsum.photos/1004/483" loading="lazy" decoding="async" alt="">
+                <img src="https://picsum.photos/1005/484" loading="lazy" decoding="async" alt="">
+                <img src="https://picsum.photos/1008/487" loading="lazy" decoding="async" alt="">
+            </div>
+            <div class="wall-row">
+                <img src="https://picsum.photos/1001/480" loading="lazy" decoding="async" alt="">
+                <img src="https://picsum.photos/1002/480" loading="lazy" decoding="async" alt="">
+                <img src="https://picsum.photos/1003/480" loading="lazy" decoding="async" alt="">
+                <img src="https://picsum.photos/1004/480" loading="lazy" decoding="async" alt="">
+                <img src="https://picsum.photos/1005/480" loading="lazy" decoding="async" alt="">
+                <img src="https://picsum.photos/1006/480" loading="lazy" decoding="async" alt="">
+            </div>
+        </div>
+
+        <div class="feedback-data">
+            <div class="data-row">
+                <div class="data-column">
+                    <img class="user-img" src="https://picsum.photos/501/500" alt="">
+                    <div class="user-stars">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512"
+                            height="30" width="30" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                            </path>
+                        </svg>
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512"
+                            height="30" width="30" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                            </path>
+                        </svg>
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512"
+                            height="30" width="30" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                            </path>
+                        </svg>
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512"
+                            height="30" width="30" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                            </path>
+                        </svg>
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512"
+                            height="30" width="30" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h4 class="title user-name">
+                        سروش کریمزاده
+                    </h4>
+                    <p class="user-review title_smaller">
+                        "
+                        با گوجه دیگه هر شب با رفیقام یه جای همیشگی رو نمیریم.
+                        "
+                    </p>
+                </div>
+                <div class="data-column">
+                    <img class="user-img" src="https://picsum.photos/500/501" alt="">
+                    <div class="user-stars">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512"
+                            height="30" width="30" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                            </path>
+                        </svg>
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512"
+                            height="30" width="30" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                            </path>
+                        </svg>
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512"
+                            height="30" width="30" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                            </path>
+                        </svg>
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512"
+                            height="30" width="30" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                            </path>
+                        </svg>
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512"
+                            height="30" width="30" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h4 class="title user-name">
+                        امیر خانمحمدی
+                    </h4>
+                    <p class="user-review title_smaller">
+                        "
+                        من اصلا نمیدونستم انقدر رستوران تو تهران داریم!"
+                    </p>
+                </div>
+                <div class="data-column">
+                    <img class="user-img" src="https://picsum.photos/501/501" alt="">
+                    <div class="user-stars">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512"
+                            height="30" width="30" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                            </path>
+                        </svg>
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512"
+                            height="30" width="30" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                            </path>
+                        </svg>
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512"
+                            height="30" width="30" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                            </path>
+                        </svg>
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512"
+                            height="30" width="30" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                            </path>
+                        </svg>
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512"
+                            height="30" width="30" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h4 class="title user-name">
+                        سام بقایی
+                    </h4>
+                    <p class="user-review title_smaller">
+                        "
+                        به لطف گوجه میتونم کله منو های رستوران هارو تو چند ثانیه ببینم.
+                        "
+                    </p>
+                </div>
+            </div>
+            <div class="data-row">
+                <div class="data-column">
+                    <img class="user-img" src="https://picsum.photos/501/500" alt="">
+                    <div class="user-stars">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512"
+                            height="30" width="30" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                            </path>
+                        </svg>
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512"
+                            height="30" width="30" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                            </path>
+                        </svg>
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512"
+                            height="30" width="30" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                            </path>
+                        </svg>
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512"
+                            height="30" width="30" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                            </path>
+                        </svg>
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512"
+                            height="30" width="30" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h4 class="title user-name">
+                        سروش کریمزاده
+                    </h4>
+                    <p class="user-review title_smaller">
+                        "
+                        با گوجه دیگه هر شب با رفیقام یه جای همیشگی رو نمیریم.
+                        "
+                    </p>
+                </div>
+                <div class="data-column">
+                    <img class="user-img" src="https://picsum.photos/500/501" alt="">
+                    <div class="user-stars">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512"
+                            height="30" width="30" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                            </path>
+                        </svg>
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512"
+                            height="30" width="30" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                            </path>
+                        </svg>
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512"
+                            height="30" width="30" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                            </path>
+                        </svg>
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512"
+                            height="30" width="30" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                            </path>
+                        </svg>
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512"
+                            height="30" width="30" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h4 class="title user-name">
+                        امیر خانمحمدی
+                    </h4>
+                    <p class="user-review title_smaller">
+                        "
+                        من اصلا نمیدونستم انقدر رستوران تو تهران داریم!"
+                    </p>
+                </div>
+                <div class="data-column">
+                    <img class="user-img" src="https://picsum.photos/501/501" alt="">
+                    <div class="user-stars">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512"
+                            height="30" width="30" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                            </path>
+                        </svg>
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512"
+                            height="30" width="30" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                            </path>
+                        </svg>
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512"
+                            height="30" width="30" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                            </path>
+                        </svg>
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512"
+                            height="30" width="30" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                            </path>
+                        </svg>
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512"
+                            height="30" width="30" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h4 class="title user-name">
+                        سام بقایی
+                    </h4>
+                    <p class="user-review title_smaller">
+                        "
+                        به لطف گوجه میتونم کله منو های رستوران هارو تو چند ثانیه ببینم.
+                        "
+                    </p>
+                </div>
+            </div>
+            <div class="data-row">
+                <div class="data-column">
+                    <img class="user-img" src="https://picsum.photos/501/500" alt="">
+                    <div class="user-stars">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512"
+                            height="30" width="30" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                            </path>
+                        </svg>
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512"
+                            height="30" width="30" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                            </path>
+                        </svg>
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512"
+                            height="30" width="30" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                            </path>
+                        </svg>
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512"
+                            height="30" width="30" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                            </path>
+                        </svg>
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512"
+                            height="30" width="30" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h4 class="title user-name">
+                        سروش کریمزاده
+                    </h4>
+                    <p class="user-review title_smaller">
+                        "
+                        با گوجه دیگه هر شب با رفیقام یه جای همیشگی رو نمیریم.
+                        "
+                    </p>
+                </div>
+                <div class="data-column">
+                    <img class="user-img" src="https://picsum.photos/500/501" alt="">
+                    <div class="user-stars">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512"
+                            height="30" width="30" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                            </path>
+                        </svg>
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512"
+                            height="30" width="30" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                            </path>
+                        </svg>
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512"
+                            height="30" width="30" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                            </path>
+                        </svg>
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512"
+                            height="30" width="30" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                            </path>
+                        </svg>
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512"
+                            height="30" width="30" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h4 class="title user-name">
+                        امیر خانمحمدی
+                    </h4>
+                    <p class="user-review title_smaller">
+                        "
+                        من اصلا نمیدونستم انقدر رستوران تو تهران داریم!"
+                    </p>
+                </div>
+                <div class="data-column">
+                    <img class="user-img" src="https://picsum.photos/501/501" alt="">
+                    <div class="user-stars">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512"
+                            height="30" width="30" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                            </path>
+                        </svg>
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512"
+                            height="30" width="30" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                            </path>
+                        </svg>
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512"
+                            height="30" width="30" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                            </path>
+                        </svg>
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512"
+                            height="30" width="30" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                            </path>
+                        </svg>
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512"
+                            height="30" width="30" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h4 class="title user-name">
+                        سام بقایی
+                    </h4>
+                    <p class="user-review title_smaller">
+                        "
+                        به لطف گوجه میتونم کله منو های رستوران هارو تو چند ثانیه ببینم.
+                        "
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="faq">
+        <img src="/static/img/questionMark.png" class="faq-bg-img" loading="lazy" decoding="async" alt="">
+        <div class="faq-wrapper">
+            <h2 class="faq-title section_title">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 384 512" height="1em"
+                    width="1em" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M202.021 0C122.202 0 70.503 32.703 29.914 91.026c-7.363 10.58-5.093 25.086 5.178 32.874l43.138 32.709c10.373 7.865 25.132 6.026 33.253-4.148 25.049-31.381 43.63-49.449 82.757-49.449 30.764 0 68.816 19.799 68.816 49.631 0 22.552-18.617 34.134-48.993 51.164-35.423 19.86-82.299 44.576-82.299 106.405V320c0 13.255 10.745 24 24 24h72.471c13.255 0 24-10.745 24-24v-5.773c0-42.86 125.268-44.645 125.268-160.627C377.504 66.256 286.902 0 202.021 0zM192 373.459c-38.196 0-69.271 31.075-69.271 69.271 0 38.195 31.075 69.27 69.271 69.27s69.271-31.075 69.271-69.271-31.075-69.27-69.271-69.27z">
+                    </path>
+                </svg>
+                سوالات متداول شما
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 384 512" height="1em"
+                    width="1em" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M202.021 0C122.202 0 70.503 32.703 29.914 91.026c-7.363 10.58-5.093 25.086 5.178 32.874l43.138 32.709c10.373 7.865 25.132 6.026 33.253-4.148 25.049-31.381 43.63-49.449 82.757-49.449 30.764 0 68.816 19.799 68.816 49.631 0 22.552-18.617 34.134-48.993 51.164-35.423 19.86-82.299 44.576-82.299 106.405V320c0 13.255 10.745 24 24 24h72.471c13.255 0 24-10.745 24-24v-5.773c0-42.86 125.268-44.645 125.268-160.627C377.504 66.256 286.902 0 202.021 0zM192 373.459c-38.196 0-69.271 31.075-69.271 69.271 0 38.195 31.075 69.27 69.271 69.27s69.271-31.075 69.271-69.271-31.075-69.27-69.271-69.27z">
+                    </path>
+                </svg>
+            </h2>
+            <p class="faq-subheader title_smaller">
+                جواب سوالت رو پیدا نکردی؟
+                <br /> سوالاتی که معمولا برای همه پیش میاد رو اینجا ببین.
+            </p>
+
+            <div class="questions-wrapper">
+                <div class="faq-row">
+                    <div class="faq-q">
+                        <h3 class="title q-header">
+                            چجوری کار میکنه؟
+                        </h3>
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+                            height="30" width="30" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="48"
+                                d="m112 184 144 144 144-144"></path>
+                        </svg>
+                    </div>
+                    <p class="faq-a title_smaller">
+                        گوجه با از طریق موقعیت مکانی شما رستوران ها و کافه های نزدیکتون پیدا میکنه و بهتون نشون
+                        میده، فقط کافیه برنامه رو باز کنی و یه لیست کامل از مکان های نزدیکت ببینی، میتونی هم تو قسمت
+                        جستجو با استفاده از فیلتر هایه برنامه کافه یا رستوران دلخواهت رو پیدا کنی.
+
+                    </p>
+                </div>
+                <div class="faq-row">
+                    <div class="faq-q">
+                        <h3 class="title q-header">
+                            گوجه به صورت رایگانه؟
+                        </h3>
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+                            height="30" width="30" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="48"
+                                d="m112 184 144 144 144-144"></path>
+                        </svg>
+                    </div>
+                    <p class="faq-a title_smaller">
+                        بله، گوجه به صورت کاملا رایگان هستش و از تمام قابلیت هاش میتونین بدونه مبلغی اضافه یا دیدنه
+                        تبلیغات استفاده کنید.
+                    </p>
+                </div>
+                <div class="faq-row">
+                    <div class="faq-q">
+                        <h3 class="title q-header">
+                            میتونم با گوجه میز رزرو کنم؟
+                        </h3>
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+                            height="30" width="30" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="48"
+                                d="m112 184 144 144 144-144"></path>
+                        </svg>
+                    </div>
+                    <p class="faq-a title_smaller">
+                        بله، با اینکه گوجه قدرت بیشتری برای دادن اطلاعات به شما برای اطرافتون داره، در نسخه های بعدی شما
+                        قابلیت رزرو میز خواهید داشت.
+                    </p>
+                </div>
+                <div class="faq-row">
+                    <div class="faq-q">
+                        <h3 class="title q-header">
+                            در چه حد دقیقه؟
+                        </h3>
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+                            height="30" width="30" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="48"
+                                d="m112 184 144 144 144-144"></path>
+                        </svg>
+                    </div>
+                    <p class="faq-a title_smaller">
+                        با اینکه داده های گوجه هر ثانیه به روز میشه ولی شما برای اطمینان از باز یا بسته بودن کافه و
+                        رستوران میتونین از داخل برنامه باهاشون تماس بگیرین. </p>
+                </div>
+                <div class="faq-row">
+                    <div class="faq-q">
+                        <h3 class="title q-header">
+                            همه جای ایران میتونم ازش استفاده کنم؟
+                        </h3>
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+                            height="30" width="30" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="48"
+                                d="m112 184 144 144 144-144"></path>
+                        </svg>
+                    </div>
+                    <p class="faq-a title_smaller">
+                        بله، شما در گوجه میتونین به تمام کافه ها و رستوران های ایران دسترسی داشته باشید.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <img src="/static/img/questionMark.png" class="faq-bg-img reverse" loading="lazy" decoding="async" alt="">
+
+    </section>
+
+
+
+    <section class="contact-us">
+        <h3 class="contact-header section_title">
+            <span class="text">جواب سوالت رو پیدا نکردی؟</span>
+            <span class="text-hover" id="contact-hover">جواب سوالت رو پیدا نکردی؟</span>
+        </h3>
+        <h4 class="contact-subheader title">
+            <span class="text">با ما در ارتباط باش</span>
+            <span class="text-hover" id="contact-sub-hover">با ما در ارتباط باش</span>
+        </h4>
+        <div class="contact-wrapper">
+            <aside class="contact-form">
+                <h4 class="title_smaller form-subheader">
+                    ارسال پیام
+                </h4>
+                <input type="text" placeholder="نام..." class="input-name title_small" name="userName">
+                <input type="text" placeholder="ایمیل..." class="input-email title_small" name="userEmail">
+                <textarea name="" placeholder="پیام شما..." class="input-msg title_smaller" id="" cols="30"
+                    rows="10"></textarea>
+                <button class="title_smaller send-cta">
+                    ارسال
+                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em"
+                        width="1em" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M217.9 256L345 129c9.4-9.4 9.4-24.6 0-33.9-9.4-9.4-24.6-9.3-34 0L167 239c-9.1 9.1-9.3 23.7-.7 33.1L310.9 417c4.7 4.7 10.9 7 17 7s12.3-2.3 17-7c9.4-9.4 9.4-24.6 0-33.9L217.9 256z">
+                        </path>
+                    </svg>
+                </button>
+            </aside>
+            <aside class="contact-img">
+                <img src="/static/img/contact.jpg" loading="lazy" decoding="async" alt="">
+            </aside>
+        </div>
+    </section>
+</main>
+{% endblock content %}
