@@ -12,7 +12,7 @@ main.blogs-container {
         background-color: black;
 
         width: 100%;
-        aspect-ratio: 1/0.18;
+        height: 340px;
 
         position: relative;
         isolation: isolate;
@@ -20,7 +20,7 @@ main.blogs-container {
         overflow: hidden;
 
         @media screen and (max-width: 768px) {
-            aspect-ratio: 1/0.47;
+            height: 300px;
         }
 
         .bg-img {
@@ -45,38 +45,53 @@ main.blogs-container {
 
                 object-fit: contain;
 
-                $top_row_y: 50%;
-                $top_row_x: 24%;
-                $top_row_rotate: 10deg;
+                --top_row_y: 50%;
+                --top_row_x: 24%;
+                --top_row_rotate: 10deg;
 
                 &#burger {
-                    bottom: $top_row_y;
-                    left: $top_row_x;
+                    bottom: var(--top_row_y);
+                    left: var(--top_row_x);
 
-                    rotate: $top_row_rotate;
+                    rotate: var(--top_row_rotate);
                 }
                 &#sushi {
-                    bottom: $top_row_y;
-                    left: calc(100% - $top_row_x);
+                    bottom: var(--top_row_y);
+                    left: calc(100% - var(--top_row_x));
 
-                    rotate: calc(-1 * $top_row_rotate);
+                    rotate: calc(-1 * var(--top_row_rotate));
                 }
 
-                $bottom_row_y: 18px;
-                $bottom_row_x: 11%;
-                $bottom_row_rotate: 11deg;
+                --bottom_row_y: 18px;
+                --bottom_row_x: 11%;
+                --bottom_row_rotate: 11deg;
 
                 &#pizza {
-                    bottom: $bottom_row_y;
-                    left: $bottom_row_x;
+                    bottom: var(--bottom_row_y);
+                    left: var(--bottom_row_x);
 
-                    rotate: $bottom_row_rotate;
+                    rotate: var(--bottom_row_rotate);
                 }
                 &#abgosht {
-                    bottom: $bottom_row_y;
-                    left: calc(100% - $bottom_row_x);
+                    bottom: var(--bottom_row_y);
+                    left: calc(100% - var(--bottom_row_x));
 
-                    rotate: calc(-1 * $bottom_row_rotate);
+                    rotate: calc(-1 * var(--bottom_row_rotate));
+                }
+
+                @media screen and (max-width: 768px) {
+                    width: 70px;
+                    opacity: 0.7;
+
+                    &#burger {
+                        left: calc(var(--top_row_x) - 10%);
+                    }
+                    &#abgosht {
+                        left: calc(90% - var(--bottom_row_x));
+                    }
+                }
+                @media screen and (max-width: 425px) {
+                    width: 60px;
                 }
             }
         }
