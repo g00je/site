@@ -85,6 +85,9 @@ main.home {
                 height: 125px;
             }
             @media screen and (max-width: 600px) {
+                height: 100px;
+            }
+            @media screen and (max-width: 600px) {
                 height: 75px;
             }
 
@@ -92,6 +95,8 @@ main.home {
                 height: 100%;
                 aspect-ratio: 1/1;
                 object-fit: contain;
+
+                will-change: top;
 
                 position: relative;
                 top: 1000px;
