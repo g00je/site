@@ -18,7 +18,6 @@ async fn home(env: Data<Environment<'static>>) -> Response {
     Ok(HttpResponse::Ok().content_type(ContentType::html()).body(result))
 }
 
-
 #[get("/blogs")]
 async fn blogs(rq: HttpRequest, env: Data<Environment<'static>>) -> Response {
     let mut page = 0;
@@ -80,7 +79,6 @@ async fn blog(
     })?;
     Ok(HttpResponse::Ok().content_type(ContentType::html()).body(result))
 }
-
 
 #[get("/robots.txt")]
 async fn robots() -> HttpResponse {
