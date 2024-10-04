@@ -25,7 +25,60 @@ main.blogs-container {
 
         .bg-img {
             position: absolute;
+            z-index: -2;
+        }
+
+        .bg-icons {
+            width: 100%;
+            height: 100%;
+
+            position: absolute;
             z-index: -1;
+
+            .bg-icon {
+                position: absolute;
+
+                width: 95px;
+                aspect-ratio: 1;
+
+                filter: blur(2px);
+
+                object-fit: contain;
+
+                $top_row_y: 50%;
+                $top_row_x: 24%;
+                $top_row_rotate: 10deg;
+
+                &#burger {
+                    bottom: $top_row_y;
+                    left: $top_row_x;
+
+                    rotate: $top_row_rotate;
+                }
+                &#sushi {
+                    bottom: $top_row_y;
+                    left: calc(100% - $top_row_x);
+
+                    rotate: calc(-1 * $top_row_rotate);
+                }
+
+                $bottom_row_y: 18px;
+                $bottom_row_x: 11%;
+                $bottom_row_rotate: 11deg;
+
+                &#pizza {
+                    bottom: $bottom_row_y;
+                    left: $bottom_row_x;
+
+                    rotate: $bottom_row_rotate;
+                }
+                &#abgosht {
+                    bottom: $bottom_row_y;
+                    left: calc(100% - $bottom_row_x);
+
+                    rotate: calc(-1 * $bottom_row_rotate);
+                }
+            }
         }
 
         > h1 {
