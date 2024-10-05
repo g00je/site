@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}
+
+
+<title>{{ blog.title }}</title>
+
+<meta name="description" content="{{ blog.detail }}">
+
+
+
+{% endblock title %}
+
+{% block header %}
+
+<link rel="stylesheet" href="/static/style/pages/blog.css">
+
+{% endblock header %}
+
+{% block content %}
+<main class="blog-container">
+    {{ blog_body | safe }}
+</main>
+{% endblock content %}
