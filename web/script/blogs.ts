@@ -52,3 +52,16 @@ document.addEventListener('DOMContentLoaded', () => {
         article.insertBefore(svg, article.firstChild)
     })
 })
+
+const headIconsWrapper = document.querySelector<HTMLElement>('.bg-icons')
+const headIcons = headIconsWrapper.querySelectorAll('.bg-icon')
+
+document.addEventListener('scroll', e => {
+    let value = scrollY
+
+    headIcons.forEach((icon: HTMLElement) => {
+        const imgElem = icon.querySelector<HTMLElement>('img')
+
+        imgElem.style.transform = `translateY(${Math.min(400, value)}px)`
+    })
+})
