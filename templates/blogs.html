@@ -6,7 +6,7 @@
 <title>کشف بهترین رستوران‌ها، کافه‌ها و غذاخوری‌های نزدیک من با گوجه | وبلاگ گوجه</title>
 
 <meta name="description"
-    content="با گوجه، بهترین رستوران‌ها، کافه‌ها، بستنی‌فروشی‌ها و غذاخوری‌های نزدیک خود را پیدا کنید. وبلاگ گوجه به شما راهنمایی می‌کند که بهترین گزینه‌ها را انتخاب کنید.">
+  content="با گوجه، بهترین رستوران‌ها، کافه‌ها، بستنی‌فروشی‌ها و غذاخوری‌های نزدیک خود را پیدا کنید. وبلاگ گوجه به شما راهنمایی می‌کند که بهترین گزینه‌ها را انتخاب کنید.">
 
 
 
@@ -89,28 +89,40 @@
 
 {% block content %}
 <main class="blogs-container">
-    <header class="blogs-header">
-        <img class="bg-img" src="/static/img/hero.png" alt="مقالات گوجه درباره بهترین رستوران‌ها، کافه‌ها و غذاخوری‌ها">
-        <h1 class="header-title title_hero">مقالات گوجه</h1>
-        <h2 class="title_small">جدیدترین مقالات و راهنماها درباره بهترین مکان‌های غذاخوری، کافه‌ها و بیشتر</h2>
-        <div class="bg-icons">
-            <img src="/static/img/pizza.png" loading="lazy" decoding="async" class="bg-icon" id="pizza"
-                alt="پیتزا ایتالیایی خوشمزه | رستوران‌های نزدیک با گوجه">
-            <img src="/static/img/burger.png" loading="lazy" decoding="async" class="bg-icon" id="burger"
-                alt="برگرهای آبدار و خوشمزه | غذاهای نزدیک با گوجه">
-            <img src="/static/img/sushi.png" loading="lazy" decoding="async" class="bg-icon" id="sushi"
-                alt="سوشی تازه ژاپنی | رستوران‌های سوشی نزدیک با گوجه">
-            <img src="/static/img/abgosht.png" loading="lazy" decoding="async" class="bg-icon" id="abgosht"
-                alt="آبگوشت سنتی ایرانی | غذاخوری‌های نزدیک با گوجه">
+  <header class="blogs-header">
+    <img class="bg-img" src="/static/img/hero.png" alt="مقالات گوجه درباره بهترین رستوران‌ها، کافه‌ها و غذاخوری‌ها">
+    <h1 class="header-title title_hero">مقالات گوجه</h1>
+    <h2 class="title_small">جدیدترین مقالات و راهنماها درباره بهترین مکان‌های غذاخوری، کافه‌ها و بیشتر</h2>
+    <div class="bg-icons">
 
-        </div>
-    </header>
-    <!-- {{ blogs_body | safe }} -->
+      <div class="bg-icon" id="pizza">
+        <img src="/static/img/pizza.png" loading="lazy" decoding="async"
+          alt="پیتزا ایتالیایی خوشمزه | رستوران‌های نزدیک با گوجه">
+      </div>
 
-    <div class="simurgh--blogs">
-        {{ blogs_body | safe }}
+      <div class="bg-icon" id="burger">
+        <img src="/static/img/burger.png" loading="lazy" decoding="async"
+          alt="برگرهای آبدار و خوشمزه | غذاهای نزدیک با گوجه">
+      </div>
+
+      <div class="bg-icon" id="sushi">
+        <img src="/static/img/sushi.png" loading="lazy" decoding="async"
+          alt="سوشی تازه ژاپنی | رستوران‌های سوشی نزدیک با گوجه">
+      </div>
+
+      <div class="bg-icon" id="abgosht">
+        <img src="/static/img/abgosht.png" loading="lazy" decoding="async"
+          alt="آبگوشت سنتی ایرانی | غذاخوری‌های نزدیک با گوجه">
+      </div>
+
     </div>
-    <!-- <div class="simurgh--blogs">
+  </header>
+  <!-- {{ blogs_body | safe }} -->
+
+  <div class="simurgh--blogs">
+    {{ blogs_body | safe }}
+  </div>
+  <!-- <div class="simurgh--blogs">
         <article>
             <img src="https://fastly.picsum.photos/id/986/1000/1000.jpg?hmac=JjWzpxjubzYfzUbqtJGAFoNPqMqBGJRllpBFjNNkQQk"
                 alt="">
@@ -138,7 +150,7 @@
             </div>
 
             <p class=""></p> -->
-    <!-- 
+  <!-- 
             <a href="" class="description">
                 بزن بریم
             </a> 
