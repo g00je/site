@@ -73,7 +73,7 @@ async fn blog(
     let result = simurgh_request(&format!("/blogs-ssr/{}/", path.0)).await;
     let result = result?.json::<BlogSSRR>().await?;
 
-    let result = env.get_template("blog/index.html")?.render(context! {
+    let result = env.get_template("blog.html")?.render(context! {
         blog_body => result.html,
         blog => result.blog,
     })?;
