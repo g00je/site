@@ -163,37 +163,32 @@ document.addEventListener('DOMContentLoaded', () => {
     var observer = new IntersectionObserver(
         ([entry]) => {
             if (entry && entry.isIntersecting) {
-                downloadWrapper.style.boxShadow = `rgb(236, 15, 15,0.5) 0px 7px ${Math.max(
+                let intersectionRatioSquared =
+                    entry.intersectionRatio * entry.intersectionRatio
+
+                // Smooth shadow expansion with finer granularity
+                downloadWrapper.style.boxShadow = `rgba(236, 15, 15, 0.5) 0px 7px ${Math.max(
                     10,
-                    Math.min(
-                        Math.floor(
-                            entry.intersectionRatio *
-                                entry.intersectionRatio *
-                                75
-                        ),
-                        74
-                    )
+                    Math.min(Math.floor(intersectionRatioSquared * 75), 74)
                 )}px 0px`
 
-                downloadImgFirst.style.transform = `rotate(${Math.min(
-                    entry.intersectionRatio * 20,
-                    13
-                )}deg)
-                scale(0.8)
-                translateX(${Math.min(60, entry.intersectionRatio * 100)}%)
+                // Smooth rotation and translate for the first image
+                downloadImgFirst.style.transform = `
+                    rotate(${Math.min(entry.intersectionRatio * 18, 13)}deg)
+                    scale(${0.7 + entry.intersectionRatio * 0.2})
+                    translateX(${Math.min(60, entry.intersectionRatio * 100)}%)
                 `
 
-                downloadImgSec.style.transform = `rotate(-${Math.min(
-                    entry.intersectionRatio * 20,
-                    13
-                )}deg)
-                scale(0.8)
-                translateX(-${Math.min(60, entry.intersectionRatio * 100)}%)
+                // Smooth rotation and translate for the second image (inverse rotation)
+                downloadImgSec.style.transform = `
+                    rotate(-${Math.min(entry.intersectionRatio * 18, 13)}deg)
+                    scale(${0.7 + entry.intersectionRatio * 0.2})
+                    translateX(-${Math.min(60, entry.intersectionRatio * 100)}%)
                 `
             }
         },
         {
-            threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1],
+            threshold: Array.from({ length: 51 }, (_, i) => i / 50), // Finer thresholds for smoother transitions
         }
     )
 
