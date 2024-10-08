@@ -386,7 +386,19 @@ main.home {
                     display: flex;
                     flex-direction: column;
 
+                    opacity: 0;
+                    transform: translateX(50%);
+
+                    transition: 1s 0.1s cubic-bezier(0.45, 0.02, 0.09, 0.98);
+
+                    &.active {
+                        opacity: 1;
+                        transform: translateX(0);
+                    }
+
                     &.search {
+                        transition-delay: 0s;
+
                         svg {
                             animation: search-floating 3s ease-in-out infinite;
                             @keyframes search-floating {
