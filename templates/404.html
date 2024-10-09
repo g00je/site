@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+
+<title>صفحه یافت نشد | صنایع تولیدی حیدری</title>
+<meta name="description"
+    content="متأسفانه صفحه‌ای که به دنبال آن بودید پیدا نشد. می‌توانید به صفحه اصلی بازگردید یا سایر صفحات سایت را بررسی کنید.">
+
+
+{% endblock title %}
+
+{% block header %}
+
+
+<link rel="canonical" href="https://gooje.site/404">
+<link rel="alternate" hreflang="fa" href="https://gooje.site/404">
+<link rel="alternate" hreflang="x-default" href="https://gooje.site/404">
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "صفحه ۴۰۴ - یافت نشد",
+        "description": "متاسفانه صفحه مورد نظر شما در گوجه یافت نشد. به گوجه مراجعه کنید تا کافه‌ها، رستوران‌ها و سایر غذاخوری‌های اطراف خود را پیدا کنید.",
+        "url": "https://gooje.site/404",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://gooje.site/?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        },
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "خانه",
+              "item": "https://gooje.site"
+            }
+          ]
+        }
+    }
+</script>
+
+
+{% endblock header %}
+
+{% block content %}
+<main class="error-404"></main>
+{% endblock content %}
