@@ -1,8 +1,35 @@
-let featuresSection = document.querySelector<HTMLElement>(
+let featuresSection = document.querySelector<HTMLElement>('section.features')
+let features = featuresSection.querySelectorAll('.extra-feature')
+
+document.addEventListener('DOMContentLoaded', () => {
+    const getThreshHold = (): number => {
+        if (innerWidth <= 375) return 0.3
+        if (innerWidth <= 768) return 0.4
+        if (innerWidth <= 1024) return 0.5
+        if (innerWidth <= 1440) return 0.6
+        return 0.7
+    }
+
+    var observer = new IntersectionObserver(
+        ([entry]) => {
+            if (entry && entry.isIntersecting) {
+                features.forEach(feature => (feature.className += ' active'))
+                observer.unobserve(entry.target)
+            }
+        },
+        {
+            threshold: getThreshHold(),
+        }
+    )
+
+    observer.observe(featuresSection)
+})
+
+let extraFeaturesSection = document.querySelector<HTMLElement>(
     'section.features-list'
 )!
 
-let extraFeatures = document.querySelectorAll<HTMLDivElement>(
+let extraFeatures = extraFeaturesSection.querySelectorAll<HTMLDivElement>(
     '.extra-feature#transform'
 )
 
@@ -16,7 +43,7 @@ let dateImgs = document.querySelectorAll<HTMLElement>('.date-img')
 window.onscroll = () => {
     let transform =
         Math.max(
-            featuresSection.getBoundingClientRect().top -
+            extraFeaturesSection.getBoundingClientRect().top -
                 (innerWidth > 1024 ? 450 : 200),
             0
         ) / 2
@@ -98,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ([entry]) => {
             if (entry && entry.isIntersecting) {
                 faqSection.className += ' active'
-                observer.disconnect()
+                observer.unobserve(entry.target)
             }
         },
         {
