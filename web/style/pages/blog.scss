@@ -129,36 +129,72 @@
             }
         }
     }
+
+    .simurgh--blog-options {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 2em;
+
+        .simurgh--blog-option {
+            display: flex;
+
+            font-size: clamp(0.8rem, 0.4rem + 1.6vw, 1rem);
+            font-family: 'yekan';
+
+            padding-bottom: 1em;
+            border-bottom: 2px solid var(--addon-percent);
+
+            gap: 0.5em;
+
+            svg {
+                width: 25px;
+                height: 25px;
+            }
+
+            div {
+                display: flex;
+                align-items: center;
+                gap: 0.5em;
+            }
+        }
+    }
+
+    .simurgh--blog-preview {
+        padding-block: 4rem;
+
+        h1 {
+            margin-bottom: 1em;
+            font-family: 'iranBold';
+        }
+
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'iranSans';
+            margin-bottom: 0.5em;
+        }
+
+        p {
+            margin-bottom: 1em;
+            font-family: yekan;
+        }
+
+        hr {
+            margin-block: 2rem;
+        }
+
+        img,
+        video {
+            margin-block: 2rem;
+        }
+    }
 }
 
 .related-blogs {
     display: none;
 }
-
-// h1 {
-//     margin-bottom: 1em;
-//     font-family: 'iranBold';
-// }
-
-// h2,
-// h3,
-// h4,
-// h5,
-// h6 {
-//     font-family: 'iranSans';
-//     margin-bottom: 0.5em;
-// }
-
-// p {
-//     margin-bottom: 1em;
-//     font-family: yekan;
-// }
-
-// hr {
-//     margin-block: 2rem;
-// }
-
-// img,
-// video {
-//     margin-block: 2rem;
-// }
