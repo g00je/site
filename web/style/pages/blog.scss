@@ -226,6 +226,55 @@
     }
 }
 
+.addon-svg {
+    position: fixed;
+
+    width: 500px;
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+    filter: blur(5px);
+    rotate: 20deg;
+
+    will-change: transform;
+
+    opacity: 0;
+
+    z-index: 1;
+    transition: opacity 1s ease-in-out;
+
+    &#sec {
+        bottom: 25%;
+        right: 0;
+
+        @media screen and (max-width: 1440px) {
+            right: -16%;
+        }
+        @media screen and (max-width: 1024px) {
+            right: 30%;
+        }
+    }
+    &#first {
+        bottom: 5%;
+        left: 0;
+        animation-delay: 0.5s;
+
+        @media screen and (max-width: 1440px) {
+            left: -16%;
+        }
+        @media screen and (max-width: 1024px) {
+            display: none;
+        }
+    }
+
+    svg {
+        width: 100%;
+        height: 100%;
+
+        opacity: 0.4;
+    }
+}
+
 .related-blogs {
     display: none;
 }
