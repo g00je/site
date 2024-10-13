@@ -62,7 +62,7 @@ document.onscroll = e => {
 
     let percentage = 100 - (rect.bottom / rect.height) * 100
 
-    // percentage *= 2
+    percentage *= 0.6
 
     console.log(Math.max(0, percentage))
 
