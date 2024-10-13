@@ -19,10 +19,10 @@
 
 <link rel="stylesheet" href="/static/style/pages/blog.css">
 
+<script src="/static/script/blog.js" defer></script>
+
 {% endblock header %}
 
 {% block content %}
-<main class="blog-container">
-    {{ blog_body | safe }}
-</main>
+{{ blog_body | safe }}
 {% endblock content %}
