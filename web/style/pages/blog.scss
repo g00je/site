@@ -1,24 +1,164 @@
-h1 {
-    margin-bottom: 1em;
+.simurgh--blog-fnd {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    width: clamp(0px, 100%, 1000px);
+    margin: 0 auto;
+
+    min-height: 100vh;
+
+    position: relative;
+    isolation: isolate;
+
+    overflow: hidden;
+
+    $transformY: 136px;
+    $anim_delay: 1s;
+
+    .scene {
+        width: 100%;
+
+        height: 150vh;
+    }
+
+    .blog-intro {
+        position: fixed;
+
+        top: calc(50vh - 50%);
+
+        perspective: 1000px;
+
+        height: 100%;
+        width: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        .blog-thumbnail-container {
+            position: relative;
+
+            transform: translateY($transformY);
+
+            z-index: 1;
+
+            width: clamp(0px, 100%, 700px);
+            height: 400px;
+
+            background-color: white;
+            border-radius: 1rem;
+
+            perspective: 1000px;
+
+            overflow: hidden;
+
+            will-change: top, transform;
+            animation: default-trans-anim 0.7s $anim_delay
+                cubic-bezier(0.33, 1, 0.68, 1) forwards;
+
+            .blog-thumbnail {
+                width: 100%;
+                height: 100%;
+
+                object-fit: cover;
+            }
+        }
+
+        .blog-title {
+            position: relative;
+
+            transform: translateY(calc(-1 * $transformY));
+
+            width: clamp(0px, 100%, 700px);
+
+            perspective: 1000px;
+
+            margin-top: 1em;
+
+            font-size: clamp(1.2rem, 2.3vw + 0.7rem, 2.1rem);
+            font-family: 'iranBold';
+            text-align: center;
+            text-wrap: pretty;
+
+            will-change: top, transform;
+            animation: default-trans-anim 0.7s $anim_delay
+                cubic-bezier(0.33, 1, 0.68, 1) forwards;
+
+            span {
+                will-change: transform;
+
+                display: inline-block;
+            }
+        }
+
+        .cbg {
+            position: relative;
+            transform: translateY(calc(-1 * $transformY));
+
+            perspective: 1000px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 2em;
+
+            will-change: top, transform;
+            animation: default-trans-anim 0.7s $anim_delay
+                cubic-bezier(0.33, 1, 0.68, 1) forwards;
+
+            span {
+                display: flex;
+                align-items: center;
+
+                will-change: transform;
+
+                font: inherit;
+
+                &:first-child {
+                    font-family: 'yekan';
+                }
+            }
+        }
+
+        @keyframes default-trans-anim {
+            to {
+                transform: translateY(0);
+            }
+        }
+    }
 }
 
-h2,
-h3,
-h4,
-h5,
-h6 {
-    margin-bottom: 0.5em;
+.related-blogs {
+    display: none;
 }
 
-p {
-    margin-bottom: 1em;
-}
+// h1 {
+//     margin-bottom: 1em;
+//     font-family: 'iranBold';
+// }
 
-br {
-    margin-block: 2rem;
-}
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+//     font-family: 'iranSans';
+//     margin-bottom: 0.5em;
+// }
 
-img,
-video {
-    margin-block: 2rem;
-}
+// p {
+//     margin-bottom: 1em;
+//     font-family: yekan;
+// }
+
+// hr {
+//     margin-block: 2rem;
+// }
+
+// img,
+// video {
+//     margin-block: 2rem;
+// }
