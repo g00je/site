@@ -1,5 +1,4 @@
 const goojeSvg = `<svg width="45" height="45" viewBox="0 0 126.99999 127.00005" version="1.1" id="svg1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
-
 <g id="layer1-9" transform="matrix(0.45145861,0,0,0.45145861,16.086023,-4.0643947)" style="stroke-width:1.65301">
     <path style="fill:#e13a34;stroke:none;stroke-width:1.65301" d="m 63.369062,117.39147 c -5.651496,0.7442 -10.992885,1.87798 -16.139583,4.45134 -31.066272,15.53314 -35.028353,57.15849 -20.910255,85.39469 16.128118,32.25624 52.221974,45.73267 86.526926,41.46426 20.56502,-2.55882 41.21741,-11.41228 55.78215,-26.40668 23.2584,-23.94451 34.23451,-67.39034 6.39493,-92.53557 -10.13023,-9.1498 -23.51849,-13.3829 -37.04167,-12.45667 -11.59118,0.79391 -22.69688,4.49236 -34.39583,4.20578 -13.323364,-0.32636 -26.845181,-5.87796 -40.216668,-4.11715 M 185.0774,171.78333 h -0.26459 c -6.76922,-20.00809 -24.72136,-36.83806 -43.92083,-44.71458 1.43276,-0.60122 3.26427,-0.20528 4.7625,0 4.07947,0.55898 8.10793,1.51764 11.90625,3.1354 16.14982,6.87843 27.46764,23.81124 27.51667,41.57918 M 41.408646,135.53542 c -0.94886,3.31914 -2.557257,6.48489 -3.61312,9.78958 -2.101809,6.57835 -3.621613,13.49317 -4.27947,20.37292 -1.087466,11.37262 -0.522401,22.93051 1.862919,34.13125 1.225539,5.75475 3.388084,11.23355 4.706754,16.93333 h -0.264583 c -3.592853,-5.45432 -7.162903,-10.56079 -9.629726,-16.66875 -6.268658,-15.52147 -4.959145,-32.34027 1.267994,-47.625 2.195377,-5.38862 5.347365,-13.18674 9.949232,-16.93333 z" id="path32"></path>
     <g id="g32" transform="translate(0.05270814,0.01756976)" style="stroke-width:1.65301">
@@ -59,6 +58,19 @@ scene.className = 'scene'
 blogMain.insertBefore(scene, blogMain.firstChild)
 // add scene end
 
+let addonSvg1 = document.createElement('div')
+addonSvg1.className = 'addon-svg'
+addonSvg1.id = 'first'
+addonSvg1.innerHTML = `${goojeSvg}`
+
+let addonSvg2 = document.createElement('div')
+addonSvg2.className = 'addon-svg'
+addonSvg2.id = 'sec'
+addonSvg2.innerHTML = `${goojeSvg}`
+
+blogMain.insertAdjacentElement('afterend', addonSvg1)
+blogMain.insertAdjacentElement('afterend', addonSvg2)
+
 const MaxPerspective = 1001
 document.onscroll = e => {
     const rect = scene.getBoundingClientRect()
@@ -77,6 +89,14 @@ document.onscroll = e => {
     titleSpan.style.transform = `translate3d(0, ${Math.min(MaxPerspective, percentage * 2)}px,${Math.min(MaxPerspective, percentage * 25)}px) `
 
     cbg.style.opacity = `${1 - Math.min(1, Math.max(0, percentage / 10))}`
+
+    if (percentage >= 40) {
+        addonSvg1.style.opacity = `1`
+        addonSvg2.style.opacity = `1`
+    } else {
+        addonSvg1.style.opacity = `0`
+        addonSvg2.style.opacity = `0`
+    }
 }
 
 // tools
