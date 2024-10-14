@@ -132,8 +132,8 @@ main.home {
                 }
                 &#pizza {
                     img {
-                        transform: scale(1.2) translateY(-9px) translateX(-45px)
-                            rotate3d(-5.6, -0.3, 1, -25deg);
+                        transform: scale(1.25) translateY(-7px)
+                            translateX(-53px) rotate3d(1, 1, 1, -47deg);
 
                         @media screen and (max-width: 600px) {
                             transform: scale(1.1) translateY(-1px)
@@ -176,45 +176,6 @@ main.home {
                     object-fit: contain;
 
                     will-change: transform;
-
-                    &.tomato {
-                        z-index: 3;
-
-                        transform: scale(1.9) translateY(10px);
-                    }
-                    &.burger,
-                    &.sushi {
-                        z-index: 2;
-                    }
-                    &.abgosht,
-                    &.pizza {
-                        z-index: 1;
-                    }
-
-                    &.burger {
-                        transform: scale(1.5) translateY(10px) translateX(-10px);
-                    }
-                    &.pizza {
-                        transform: scale(1.2) translateY(-9px) translateX(-45px)
-                            rotate3d(-5.6, -0.3, 1, -25deg);
-
-                        @media screen and (max-width: 600px) {
-                            transform: scale(1.1) translateY(-1px)
-                                translateX(-50px) rotate3d(1, 1, 1, -47deg);
-                        }
-                    }
-                    &.sushi {
-                        transform: scale(1.5) translateY(10px) translateX(10px);
-                    }
-                    &.abgosht {
-                        transform: scale(1.25) translateY(-25px)
-                            translateX(25px) rotate(-30deg);
-
-                        @media screen and (max-width: 600px) {
-                            transform: scale(1.1) translateY(-10px)
-                                translateX(30px) rotate(-30deg);
-                        }
-                    }
                 }
             }
 
@@ -1023,18 +984,25 @@ main.home {
 
                     padding: 2em 0;
 
-                    max-height: 5em;
+                    height: 5.5em;
                     overflow: hidden;
 
                     will-change: max-height, height;
-                    transition: 2s cubic-bezier(0.45, 0.02, 0.09, 0.98);
+
+                    cursor: pointer;
+
+                    transition: height 1s cubic-bezier(0.45, 0.02, 0.09, 0.98);
+
+                    @media screen and (max-width: 768px) {
+                        height: 5em;
+                    }
 
                     &:last-child {
                         border-bottom: 1px solid var(--ten-percent);
                     }
 
                     &.active {
-                        max-height: 1000px;
+                        transition: 1.5s cubic-bezier(0.45, 0.02, 0.09, 0.98);
 
                         .faq-q {
                             svg {
