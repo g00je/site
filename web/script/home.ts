@@ -114,6 +114,10 @@ document.addEventListener('DOMContentLoaded', () => {
         ([entry]) => {
             if (entry && entry.isIntersecting) {
                 entry.target.className += ' active'
+                // @ts-ignore
+                let target: HTMLElement = entry.target
+                target.style.height = `${target.scrollHeight + 10}px`
+
                 observer.unobserve(entry.target)
             }
         },
@@ -122,7 +126,22 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     )
 
-    faqRows.forEach(elem => observer.observe(elem))
+    faqRows.forEach((elem: HTMLElement) => {
+        const q = elem.querySelector<HTMLElement>('.faq-q')
+        observer.observe(elem)
+
+        elem.addEventListener('click', () => {
+            if (elem.classList.contains('active')) {
+                elem.className = 'faq-row'
+                elem.style.height =
+                    q.getBoundingClientRect().height * 1.5 + 'px'
+                return
+            }
+
+            elem.style.height = `${elem.scrollHeight + 10}px`
+            elem.className = 'faq-row active'
+        })
+    })
 })
 
 let contactTitleHover = document.querySelector(
