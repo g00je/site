@@ -75,6 +75,8 @@ main.home {
 
             height: 200px;
 
+            perspective: 1000px;
+
             position: relative;
             isolation: isolate;
 
@@ -91,69 +93,127 @@ main.home {
                 height: 75px;
             }
 
-            img {
+            .food-container {
                 height: 100%;
-                aspect-ratio: 1/1;
-                object-fit: contain;
+                aspect-ratio: 1;
 
-                will-change: top;
+                display: flex;
+                align-items: center;
+                justify-content: center;
 
-                position: relative;
-                top: 1000px;
+                will-change: transform;
+                transform: translateY(1000px);
+
+                animation: image-slideup 1s cubic-bezier(0.45, 0.02, 0.09, 0.98)
+                    forwards;
+
+                &#tomato {
+                    z-index: 3;
+
+                    img {
+                        transform: scale(1.9) translateY(10px);
+                    }
+                }
+                &#burger,
+                &#sushi {
+                    animation-delay: 0.2s;
+                    z-index: 2;
+                }
+                &#abgosht,
+                &#pizza {
+                    animation-delay: 0.4s;
+                    z-index: 1;
+                }
+
+                &#burger {
+                    img {
+                        transform: scale(1.5) translateY(10px) translateX(-10px);
+                    }
+                }
+                &#pizza {
+                    img {
+                        transform: scale(1.2) translateY(-9px) translateX(-45px)
+                            rotate3d(-5.6, -0.3, 1, -25deg);
+
+                        @media screen and (max-width: 600px) {
+                            transform: scale(1.1) translateY(-1px)
+                                translateX(-50px) rotate3d(1, 1, 1, -47deg);
+                        }
+                    }
+                }
+                &#sushi {
+                    img {
+                        transform: scale(1.5) translateY(10px) translateX(10px);
+                    }
+                }
+                &#abgosht {
+                    img {
+                        transform: scale(1.25) translateY(-25px)
+                            translateX(25px) rotate(-30deg);
+
+                        @media screen and (max-width: 600px) {
+                            transform: scale(1.1) translateY(-10px)
+                                translateX(30px) rotate(-30deg);
+                        }
+                    }
+                }
 
                 @keyframes image-slideup {
                     0% {
-                        top: 1000px;
+                        transform: translateY(1000px);
                     }
                     50% {
-                        top: -30px;
+                        transform: translateY(-30px);
                     }
                     100% {
-                        top: 0px;
+                        transform: translateY(0px);
                     }
                 }
 
-                &.tomato {
-                    z-index: 3;
-                    animation: image-slideup 1s
-                        cubic-bezier(0.45, 0.02, 0.09, 0.98) forwards;
-                    transform: scale(1.9) translateY(10px);
-                }
-                &.burger,
-                &.sushi {
-                    z-index: 2;
+                img {
+                    height: 100%;
+                    aspect-ratio: 1/1;
+                    object-fit: contain;
 
-                    animation: image-slideup 1s 0.2s
-                        cubic-bezier(0.45, 0.02, 0.09, 0.98) forwards;
-                }
-                &.abgosht,
-                &.pizza {
-                    z-index: 1;
+                    will-change: transform;
 
-                    animation: image-slideup 1s 0.4s
-                        cubic-bezier(0.45, 0.02, 0.09, 0.98) forwards;
-                }
+                    &.tomato {
+                        z-index: 3;
 
-                &.burger {
-                    transform: scale(1.5) translateY(10px) translateX(-10px);
-                }
-                &.pizza {
-                    transform: scale(1.3) translateY(-15px) translateX(-50px);
-
-                    @media screen and (max-width: 600px) {
-                        transform: scale(1.3) translateY(5px) translateX(-30px);
+                        transform: scale(1.9) translateY(10px);
                     }
-                }
-                &.sushi {
-                    transform: scale(1.5) translateY(10px) translateX(10px);
-                }
-                &.abgosht {
-                    transform: scale(1.25) translateY(-25px) translateX(25px)
-                        rotate(-30deg);
+                    &.burger,
+                    &.sushi {
+                        z-index: 2;
+                    }
+                    &.abgosht,
+                    &.pizza {
+                        z-index: 1;
+                    }
 
-                    @media screen and (max-width: 600px) {
-                        transform: scale(1.1) translateY(-10px) translateX(30px)
-                            rotate(-30deg);
+                    &.burger {
+                        transform: scale(1.5) translateY(10px) translateX(-10px);
+                    }
+                    &.pizza {
+                        transform: scale(1.2) translateY(-9px) translateX(-45px)
+                            rotate3d(-5.6, -0.3, 1, -25deg);
+
+                        @media screen and (max-width: 600px) {
+                            transform: scale(1.1) translateY(-1px)
+                                translateX(-50px) rotate3d(1, 1, 1, -47deg);
+                        }
+                    }
+                    &.sushi {
+                        transform: scale(1.5) translateY(10px) translateX(10px);
+                    }
+                    &.abgosht {
+                        transform: scale(1.25) translateY(-25px)
+                            translateX(25px) rotate(-30deg);
+
+                        @media screen and (max-width: 600px) {
+                            transform: scale(1.1) translateY(-10px)
+                                translateX(30px) rotate(-30deg);
+                        }
                     }
                 }
             }
