@@ -8,8 +8,8 @@ const precacheResources = [
     '/static/icon/gooje-logo192.png',
     '/static/icon/gooje-logo48.png',
     '/static/icon/gooje-splash.jpg',
-    '/static/icon/gooje-screenshot1.jpeg',
-    '/static/icon/gooje-screenshot2.jpeg',
+    '/static/icon/gooje-screenshot1.webp',
+    '/static/icon/gooje-screenshot2.webp',
 ]
 
 self.addEventListener('install', event => {

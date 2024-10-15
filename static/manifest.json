@@ -83,12 +83,12 @@
 
     "screenshots": [
         {
-            "src": "/static/icon/gooje-screenshot1.jpeg",
+            "src": "/static/icon/gooje-screenshot1.webp",
             "sizes": "369x800",
             "type": "image/jpeg"
         },
         {
-            "src": "/static/icon/gooje-screenshot2.jpeg",
+            "src": "/static/icon/gooje-screenshot2.webp",
             "sizes": "369x800",
             "type": "image/jpeg"
         }
