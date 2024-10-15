@@ -178,36 +178,44 @@ let downloadWrapper = document.querySelector('.download-wrapper') as HTMLElement
 let downloadImgFirst = document.querySelector('#phone-img1') as HTMLElement
 let downloadImgSec = document.querySelector('#phone-img2') as HTMLElement
 
+const MAX_PHONE_TRANSFORMX = 75
+const MAX_PHONE_ROTATEX = 13
+
 document.addEventListener('DOMContentLoaded', () => {
     var observer = new IntersectionObserver(
         ([entry]) => {
             if (entry && entry.isIntersecting) {
-                let intersectionRatioSquared =
-                    entry.intersectionRatio * entry.intersectionRatio
-
-                // Smooth shadow expansion with finer granularity
-                downloadWrapper.style.boxShadow = `rgba(236, 15, 15, 0.5) 0px 7px ${Math.max(
+                downloadWrapper.style.boxShadow = `rgb(236, 15, 15,0.5) 0px 7px ${Math.max(
                     10,
-                    Math.min(Math.floor(intersectionRatioSquared * 75), 74)
+                    Math.min(
+                        Math.floor(
+                            entry.intersectionRatio *
+                                entry.intersectionRatio *
+                                75
+                        ),
+                        74
+                    )
                 )}px 0px`
 
-                // Smooth rotation and translate for the first image
-                downloadImgFirst.style.transform = `
-                    rotate(${Math.min(entry.intersectionRatio * 18, 13)}deg)
-                    scale(${0.7 + entry.intersectionRatio * 0.2})
-                    translateX(${Math.min(60, entry.intersectionRatio * 100)}%)
+                downloadImgFirst.style.transform = `rotate(${Math.min(
+                    entry.intersectionRatio * 20,
+                    MAX_PHONE_ROTATEX
+                )}deg)
+                scale(0.8)
+                translateX(${Math.min(MAX_PHONE_TRANSFORMX, entry.intersectionRatio * 100)}%)
                 `
 
-                // Smooth rotation and translate for the second image (inverse rotation)
-                downloadImgSec.style.transform = `
-                    rotate(-${Math.min(entry.intersectionRatio * 18, 13)}deg)
-                    scale(${0.7 + entry.intersectionRatio * 0.2})
-                    translateX(-${Math.min(60, entry.intersectionRatio * 100)}%)
+                downloadImgSec.style.transform = `rotate(-${Math.min(
+                    entry.intersectionRatio * 20,
+                    MAX_PHONE_ROTATEX
+                )}deg)
+                scale(0.8)
+                translateX(-${Math.min(MAX_PHONE_TRANSFORMX, entry.intersectionRatio * 100)}%)
                 `
             }
         },
         {
-            threshold: Array.from({ length: 51 }, (_, i) => i / 50), // Finer thresholds for smoother transitions
+            threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1],
         }
     )
 
