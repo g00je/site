@@ -26,30 +26,29 @@ nav.nav-container {
             a.nav-link {
                 &:nth-child(1) {
                     transform: translateX(0);
-
-                    transition-delay: 0.3s;
+                    transition-delay: 0.25s;
                 }
 
                 &:nth-child(2) {
                     transform: translateX(0);
-
                     transition-delay: 0.3s;
                 }
                 &:nth-child(3) {
                     transform: translateX(0);
-
-                    transition-delay: 0;
+                    transition-delay: 0s;
                 }
                 &:nth-child(4) {
                     transform: translateX(0);
-
                     transition-delay: 0.3s;
                 }
 
                 &:nth-child(5) {
                     transform: translateX(0);
-
                     transition-delay: 0.3s;
+                }
+                &:nth-child(6) {
+                    transform: translateX(0);
+                    transition-delay: 0.25s;
                 }
             }
         }
@@ -129,47 +128,29 @@ nav.nav-container {
             gap: 0.5em;
 
             will-change: transform;
+
+            transition: 0.8s cubic-bezier(0.83, 0.11, 0.25, 0.95);
+
             position: relative;
             isolation: isolate;
 
             &:nth-child(1) {
-                transform: translateX(80px);
-
-                transition-delay: 0s;
+                transform: translateX(150px);
             }
-
             &:nth-child(2) {
-                transform: translateX(25px);
-
-                transition-delay: 0s;
+                transform: translateX(55px);
             }
             &:nth-child(3) {
                 transform: translateX(0);
-
-                transition-delay: 0;
             }
             &:nth-child(4) {
-                transform: translateX(25px);
-
-                transition-delay: 0s;
+                transform: translateX(0);
             }
-
             &:nth-child(5) {
-                transform: translateX(80px);
-
-                transition-delay: 0s;
+                transform: translateX(55px);
             }
-
-            transition: 0.8s cubic-bezier(0.83, 0.11, 0.25, 0.95);
-
-            svg {
-                @media screen and (min-width: 769px) {
-                    max-width: 0;
-
-                    will-change: max-width, width;
-
-                    transition: 0.2s cubic-bezier(0.83, 0.11, 0.25, 0.95);
-                }
+            &:nth-child(6) {
+                transform: translateX(150px);
             }
 
             &::before {
@@ -202,6 +183,16 @@ nav.nav-container {
 
                 &::before {
                     height: 100%;
+                }
+            }
+
+            svg {
+                @media screen and (min-width: 769px) {
+                    max-width: 0;
+
+                    will-change: max-width, width;
+
+                    transition: 0.2s cubic-bezier(0.83, 0.11, 0.25, 0.95);
                 }
             }
         }
