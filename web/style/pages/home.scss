@@ -357,6 +357,7 @@ main.home {
             .subheader {
                 opacity: 0.7;
                 margin-bottom: 1.5em;
+                font-weight: bold;
             }
             .header {
                 font-size: clamp(1.2rem, 2.3vw + 0.7rem, 2.1rem);
@@ -587,6 +588,7 @@ main.home {
             flex-direction: column;
 
             .subheader {
+                font-weight: bold;
                 opacity: 0.7;
                 margin-bottom: 1.5em;
             }
@@ -975,6 +977,7 @@ main.home {
             }
 
             .faq-subheader {
+                font-weight: bold;
                 text-align: center;
             }
 
@@ -1165,7 +1168,8 @@ main.home {
                 justify-content: center;
 
                 .download_subheader {
-                    opacity: 0.7;
+                    opacity: 0.9;
+                    font-weight: bold;
                     margin-bottom: 0.5em;
                 }
 
