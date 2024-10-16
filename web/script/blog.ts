@@ -97,12 +97,6 @@ document.onscroll = e => {
         addonSvg1.style.opacity = `0`
         addonSvg2.style.opacity = `0`
     }
-
-    if (percentage >= 50) {
-        blogIntro.style.visibility = 'hidden'
-    } else {
-        blogIntro.style.visibility = 'visible'
-    }
 }
 
 // tools
