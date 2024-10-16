@@ -1,8 +1,8 @@
 use actix_web::dev::HttpServiceFactory;
 use actix_web::http::header::ContentType;
 use actix_web::middleware::NormalizePath;
-use actix_web::web::{Data, Path, Query};
-use actix_web::{get, routes, FromRequest, HttpRequest, HttpResponse, Scope};
+use actix_web::web::{self, Data, Path, Query};
+use actix_web::{get, FromRequest, HttpRequest, HttpResponse, Scope};
 use minijinja::{context, path_loader, Environment};
 use serde::{Deserialize, Serialize};
 use std::path::PathBuf;
@@ -94,6 +94,11 @@ Sitemap: https://gooje.site/sitemap.xml
     )
 }
 
+pub async fn not_found(env: Data<Environment<'static>>) -> Response {
+    let result = env.get_template("404.html")?.render(())?;
+    Ok(HttpResponse::NotFound().content_type(ContentType::html()).body(result))
+}
+
 pub fn router() -> impl HttpServiceFactory {
     let tmpl_path = PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("templates");
     let mut tmpl_env = Environment::new();
@@ -106,5 +111,6 @@ pub fn router() -> impl HttpServiceFactory {
         .service(blogs)
         .service(blog)
         .service(robots)
+        .service(web::resource("/404/").get(not_found))
         .service(super::sitemap::router())
 }

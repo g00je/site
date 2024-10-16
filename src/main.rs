@@ -33,7 +33,9 @@ fn config_app(app: &mut ServiceConfig) {
         app.service(redirect_simrugh_ssrs);
     }
 
-    app.service(web::router());
+    app.service(web::router()).default_service(actix_web::web::to(
+        |env: Data<minijinja::Environment<'static>>| web::not_found(env),
+    ));
 }
 
 #[cfg(unix)]
