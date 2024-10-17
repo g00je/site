@@ -42,7 +42,6 @@ span1.innerHTML = `<span>تهیه شده توسط</span>`
 const span2 = document.createElement('span')
 span2.innerHTML = `${goojeSvg}
                     <span>گوجه</span>`
-
 cbg.appendChild(span1)
 cbg.appendChild(span2)
 
@@ -51,6 +50,32 @@ if (blogTitle) {
     blogTitle.insertAdjacentElement('afterend', cbg)
 }
 // created by gooje logo end
+
+// scroll down
+let ComeDown = document.createElement('div')
+ComeDown.className = 'come-down-container'
+
+// scroll down pc
+let comeDownPc = document.createElement('div')
+comeDownPc.className = 'scrolldown'
+
+let chevrons = document.createElement('div')
+chevrons.className = 'chevrons'
+
+let chevrondown = document.createElement('div')
+chevrondown.className = 'chevrondown'
+
+chevrons.append(chevrondown)
+chevrons.append(chevrondown.cloneNode(true))
+comeDownPc.append(chevrons)
+ComeDown.append(comeDownPc)
+
+// scroll down mobile
+
+// add scroll to container
+// add scroll container to blog intro
+
+blogIntro.append(ComeDown)
 
 // add scene
 const scene = document.createElement('div')
@@ -89,6 +114,7 @@ document.onscroll = e => {
     titleSpan.style.transform = `translate3d(0, ${Math.min(MaxPerspective, percentage * 2)}px,${Math.min(MaxPerspective, percentage * 25)}px) `
 
     cbg.style.opacity = `${1 - Math.min(1, Math.max(0, percentage / 10))}`
+    ComeDown.style.opacity = `${1 - Math.min(1, Math.max(0, percentage / 10))}`
 
     if (percentage >= 40) {
         addonSvg1.style.opacity = `1`
