@@ -153,8 +153,6 @@
 
                 scale: 0.9;
 
-                margin-left: var(sizeX / 2);
-
                 border: 2px solid var(--color);
                 border-radius: 50px;
 
@@ -174,6 +172,56 @@
                     animation: scrolldown-anim 2s infinite;
 
                     box-shadow: 0px -5px 3px 1px #ffffff66;
+                }
+
+                @media screen and (max-width: 768px) {
+                    all: unset;
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    gap: 1px;
+
+                    &::before,
+                    &::after {
+                        all: unset;
+
+                        content: '';
+
+                        display: inline-block;
+                        width: 20px;
+                        height: 20px;
+
+                        position: relative;
+
+                        border: solid #ff0002;
+                        border-width: 0 3px 3px 0;
+
+                        transform: rotate(45deg);
+                    }
+
+                    &::before {
+                        animation: mobile-down 1.2s ease-in-out infinite 0.15s;
+                    }
+                    &::after {
+                        animation: mobile-down 1.2s ease-in-out infinite;
+                    }
+
+                    @keyframes mobile-down {
+                        0% {
+                            transform: translateY(20%) rotate(45deg);
+                            opacity: 0.7;
+                        }
+                        50% {
+                            transform: translateY(0%) rotate(45deg);
+                            opacity: 0.2;
+                        }
+                        100% {
+                            transform: translateY(20%) rotate(45deg);
+                            opacity: 0.7;
+                        }
+                    }
                 }
 
                 @keyframes scrolldown-anim {
@@ -203,6 +251,10 @@
                     display: flex;
                     flex-direction: column;
                     align-items: center;
+
+                    @media screen and (max-width: 768px) {
+                        display: none;
+                    }
 
                     .chevrondown {
                         position: relative;
