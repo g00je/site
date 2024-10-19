@@ -12,6 +12,10 @@ main {
 
     perspective: 1000px;
 
+    @media screen and (max-width: 768px) {
+        height: 100dvh;
+    }
+
     .gooje {
         width: clamp(0px, 100%, 200px);
         aspect-ratio: 1;
