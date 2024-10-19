@@ -57,7 +57,46 @@ ComeDown.className = 'come-down-container'
 
 // scroll down pc
 let comeDownPc = document.createElement('div')
-comeDownPc.className = 'scrolldown'
+comeDownPc.className = 'scrolldown-pc title_small'
+comeDownPc.innerHTML = `
+    <span>بیا</span>
+    <span>پایین</span>
+`
+let mouseX = 0,
+    mouseY = 0
+let circleX = 0,
+    circleY = 0
+const speed = 0.1
+
+ComeDown.append(comeDownPc)
+
+if (innerWidth > 768) {
+    document.addEventListener('mousemove', event => {
+        mouseX = event.clientX - comeDownPc.offsetWidth / 2
+        mouseY = event.clientY - comeDownPc.offsetHeight / 2
+    })
+
+    animateCircle()
+}
+
+function animateCircle() {
+    if (circleX === 0 && circleY === 0) comeDownPc.style.opacity = '0'
+    else comeDownPc.style.opacity = '1'
+
+    // Lerp the circle's position towards the cursor
+    circleX += (mouseX - circleX) * speed
+    circleY += (mouseY - circleY) * speed
+
+    comeDownPc.style.left = `${circleX}px`
+    comeDownPc.style.top = `${circleY}px`
+
+    // Continue the animation
+    requestAnimationFrame(animateCircle)
+}
+
+// scroll down mobile
+let comeDownMobile = document.createElement('div')
+comeDownMobile.className = 'scrolldown-mobile'
 
 let chevrons = document.createElement('div')
 chevrons.className = 'chevrons'
@@ -67,10 +106,8 @@ chevrondown.className = 'chevrondown'
 
 chevrons.append(chevrondown)
 chevrons.append(chevrondown.cloneNode(true))
-comeDownPc.append(chevrons)
-ComeDown.append(comeDownPc)
-
-// scroll down mobile
+comeDownMobile.append(chevrons)
+ComeDown.append(comeDownMobile)
 
 // add scroll to container
 // add scroll container to blog intro
