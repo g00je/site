@@ -160,8 +160,8 @@ document.addEventListener('DOMContentLoaded', () => {
         elem.addEventListener('click', () => {
             if (elem.classList.contains('active')) {
                 elem.className = 'faq-row'
-                elem.style.height =
-                    q.getBoundingClientRect().height * 1.5 + 'px'
+                elem.style.height = `calc(1rem + ${q.getBoundingClientRect().height * 1.5}px)`
+
                 return
             }
 

@@ -42,7 +42,6 @@ span1.innerHTML = `<span>تهیه شده توسط</span>`
 const span2 = document.createElement('span')
 span2.innerHTML = `${goojeSvg}
                     <span>گوجه</span>`
-
 cbg.appendChild(span1)
 cbg.appendChild(span2)
 
@@ -51,6 +50,69 @@ if (blogTitle) {
     blogTitle.insertAdjacentElement('afterend', cbg)
 }
 // created by gooje logo end
+
+// scroll down
+let ComeDown = document.createElement('div')
+ComeDown.className = 'come-down-container'
+
+// scroll down pc
+let comeDownPc = document.createElement('div')
+comeDownPc.className = 'scrolldown-pc title_small'
+comeDownPc.innerHTML = `
+    <span>بیا</span>
+    <span>پایین</span>
+`
+let mouseX = 0,
+    mouseY = 0
+let circleX = 0,
+    circleY = 0
+const speed = 0.1
+
+ComeDown.append(comeDownPc)
+
+if (innerWidth > 768) {
+    document.addEventListener('mousemove', event => {
+        mouseX = event.clientX - comeDownPc.offsetWidth / 2
+        mouseY = event.clientY - comeDownPc.offsetHeight / 2
+    })
+
+    animateCircle()
+}
+
+function animateCircle() {
+    if (circleX === 0 && circleY === 0) comeDownPc.style.opacity = '0'
+    else comeDownPc.style.opacity = '1'
+
+    // Lerp the circle's position towards the cursor
+    circleX += (mouseX - circleX) * speed
+    circleY += (mouseY - circleY) * speed
+
+    comeDownPc.style.left = `${circleX}px`
+    comeDownPc.style.top = `${circleY}px`
+
+    // Continue the animation
+    requestAnimationFrame(animateCircle)
+}
+
+// scroll down mobile
+let comeDownMobile = document.createElement('div')
+comeDownMobile.className = 'scrolldown-mobile'
+
+let chevrons = document.createElement('div')
+chevrons.className = 'chevrons'
+
+let chevrondown = document.createElement('div')
+chevrondown.className = 'chevrondown'
+
+chevrons.append(chevrondown)
+chevrons.append(chevrondown.cloneNode(true))
+comeDownMobile.append(chevrons)
+ComeDown.append(comeDownMobile)
+
+// add scroll to container
+// add scroll container to blog intro
+
+blogIntro.append(ComeDown)
 
 // add scene
 const scene = document.createElement('div')
@@ -89,6 +151,7 @@ document.onscroll = e => {
     titleSpan.style.transform = `translate3d(0, ${Math.min(MaxPerspective, percentage * 2)}px,${Math.min(MaxPerspective, percentage * 25)}px) `
 
     cbg.style.opacity = `${1 - Math.min(1, Math.max(0, percentage / 10))}`
+    ComeDown.style.opacity = `${1 - Math.min(1, Math.max(0, percentage / 10))}`
 
     if (percentage >= 40) {
         addonSvg1.style.opacity = `1`

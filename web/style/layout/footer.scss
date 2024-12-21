@@ -252,6 +252,7 @@ footer.footer-container {
     padding: 2rem;
 
     color: white;
+    z-index: 10;
 
     .fa {
         line-height: 2em;
@@ -259,5 +260,22 @@ footer.footer-container {
 
     .en {
         direction: ltr;
+    }
+
+    .created {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+
+        .team-00 {
+            width: 100%;
+            display: inline-block;
+
+            font-family: Graduate;
+            font-weight: bold;
+
+            letter-spacing: 2px;
+            color: black;
+        }
     }
 }
