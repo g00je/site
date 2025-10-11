@@ -34,9 +34,6 @@ main.home {
         }
 
         @media screen and (max-height: 730px) {
-            height: 95dvh;
-        }
-        @media screen and (max-height: 660px) {
             height: 100dvh;
         }
 
@@ -859,7 +856,7 @@ main.home {
                     }
                     @media screen and (min-width: 769px) {
                         &:nth-child(even) {
-                            top: -75px;
+                            top: -2em;
                             scale: 1.1;
                         }
                     }
