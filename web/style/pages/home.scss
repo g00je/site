@@ -98,72 +98,61 @@ main.home {
                 align-items: center;
                 justify-content: center;
 
-                will-change: transform;
-                transform: translateY(1000px);
+                transition: opacity 0.2s ease;
 
-                animation: image-slideup 1s cubic-bezier(0.45, 0.02, 0.09, 0.98)
-                    forwards;
+                &.opacity {
+                    opacity: 0.1;
+                }
 
-                &#tomato {
+                &:not(#mascot) {
+                    position: absolute;
+                }
+
+                &#mascot {
+                    z-index: 4;
+
+                    transform: scale(1.5) translateY(10px);
+                }
+                &#cozy,
+                &#cafe {
                     z-index: 3;
 
                     img {
-                        transform: scale(1.9) translateY(10px);
+                        animation-delay: 0.1s;
                     }
                 }
-                &#burger,
-                &#sushi {
-                    animation-delay: 0.2s;
+                &#cozy {
+                    transform: translateX(-70%) translateY(10%) scale(1.1);
+                }
+                &#friend {
+                    transform: translateX(-125%) translateY(15%) scaleX(-1);
+                }
+                &#roma {
+                    transform: translateX(-175%) translateY(15%) scaleX(-1);
+                }
+                &#cafe {
+                    transform: translateX(70%) translateY(10%) scale(1.1);
+                }
+                &#fast {
+                    transform: translateX(125%) translateY(15%);
+                }
+                &#res {
+                    transform: translateX(175%) translateY(15%) scale(0.8);
+                }
+
+                &#fast,
+                &#friend {
                     z-index: 2;
+                    img {
+                        animation-delay: 0.15s;
+                    }
                 }
-                &#abgosht,
-                &#pizza {
-                    animation-delay: 0.4s;
+                &#roma,
+                &#res {
                     z-index: 1;
-                }
 
-                &#burger {
                     img {
-                        transform: scale(1.5) translateY(10px) translateX(-10px);
-                    }
-                }
-                &#pizza {
-                    img {
-                        transform: scale(1.25) translateY(-7px)
-                            translateX(-53px) rotate3d(1, 1, 1, -47deg);
-
-                        @media screen and (max-width: 600px) {
-                            transform: scale(1.1) translateY(-1px)
-                                translateX(-50px) rotate3d(1, 1, 1, -47deg);
-                        }
-                    }
-                }
-                &#sushi {
-                    img {
-                        transform: scale(1.5) translateY(10px) translateX(10px);
-                    }
-                }
-                &#abgosht {
-                    img {
-                        transform: scale(1.25) translateY(-25px)
-                            translateX(25px) rotate(-30deg);
-
-                        @media screen and (max-width: 600px) {
-                            transform: scale(1.1) translateY(-10px)
-                                translateX(30px) rotate(-30deg);
-                        }
-                    }
-                }
-
-                @keyframes image-slideup {
-                    0% {
-                        transform: translateY(1000px);
-                    }
-                    50% {
-                        transform: translateY(-30px);
-                    }
-                    100% {
-                        transform: translateY(0px);
+                        animation-delay: 0.2s;
                     }
                 }
 
@@ -172,7 +161,28 @@ main.home {
                     aspect-ratio: 1/1;
                     object-fit: contain;
 
-                    will-change: transform;
+                    transform: translateY(1000px);
+
+                    animation: image-slideup 1s
+                        cubic-bezier(0.45, 0.02, 0.09, 0.98) forwards;
+
+                    transition: scale 0.2s ease;
+
+                    &:hover {
+                        scale: 1.02;
+                    }
+
+                    @keyframes image-slideup {
+                        0% {
+                            transform: translateY(1000px);
+                        }
+                        50% {
+                            transform: translateY(-30px);
+                        }
+                        100% {
+                            transform: translateY(0px);
+                        }
+                    }
                 }
             }
 
