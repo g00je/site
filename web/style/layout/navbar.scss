@@ -231,8 +231,6 @@ nav.nav-container {
     top: 2.5em;
     left: 3em;
 
-    filter: drop-shadow(0px 0px 6px black);
-
     z-index: 993;
 
     color: white;
@@ -242,6 +240,10 @@ nav.nav-container {
     @media screen and (max-width: 768px) {
         top: 2em;
         left: 1.5em;
+    }
+
+    .logo-title {
+        text-shadow: 0 0 10px black;
     }
 }
 
