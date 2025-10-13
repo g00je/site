@@ -1,3 +1,18 @@
+let hero = document.querySelector<HTMLElement>('section.hero')
+let foods = hero.querySelectorAll('.food-container')
+
+foods.forEach(food => {
+    food.addEventListener('mouseenter', () => {
+        foods.forEach(f => {
+            if (f !== food) f.classList.add('opacity')
+        })
+    })
+
+    food.addEventListener('mouseleave', () => {
+        foods.forEach(f => f.classList.remove('opacity'))
+    })
+})
+
 let featuresSection = document.querySelector<HTMLElement>('section.features')
 let features = featuresSection.querySelectorAll('.extra-feature')
 
