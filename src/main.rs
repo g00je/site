@@ -28,7 +28,7 @@ async fn redirect_simrugh_ssrs(path: Path<(String,)>) -> Redirect {
 
 fn config_app(app: &mut ServiceConfig) {
     if cfg!(debug_assertions) {
-        app.service(af::Files::new("/static", "static"));
+        app.service(af::Files::new("/site-static", "static"));
         app.service(redirect_simrugh_record);
         app.service(redirect_simrugh_ssrs);
     }
